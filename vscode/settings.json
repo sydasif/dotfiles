@@ -24,7 +24,7 @@
     // Font Settings
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.fontWeight": "normal",
     // --------------------------------------------------------------------------
     // 3. COLOR CUSTOMIZATIONS
