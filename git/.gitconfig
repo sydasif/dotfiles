@@ -3,6 +3,6 @@
 	email = sydasif78@gmail.com
 [core]
 	editor = vim --wait
-	autocrlf = true
+	autocrlf = input
 [init]
 	defaultBranch = main
