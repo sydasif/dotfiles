@@ -160,7 +160,7 @@
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 15,
     "terminal.integrated.fontWeight": "600",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
