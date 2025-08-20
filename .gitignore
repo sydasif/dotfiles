@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+*.sql
+*.tmp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+._*
+
+# Vagrant
+.vagrant/
+
+# JetBrains / IDEA
+*.iml
+.idea/
+
+# VS Code
+.vscode/
+
+# Vim swap files
+*.swp
+*.swo
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# Node
+npm-debug.log
+yarn-error.log

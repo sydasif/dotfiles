@@ -4,6 +4,8 @@
 [core]
     editor = vim
     autocrlf = input
+    excludesfile = ~/.gitignore
 [init]
     defaultBranch = main
-
+[diff]
+    tool = vimdiff
