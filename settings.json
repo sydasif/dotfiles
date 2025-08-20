@@ -161,7 +161,7 @@
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontWeight": "600",
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
@@ -208,11 +208,9 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
     "github.copilot.enable": {
-        "*": false,
-        "python": true,
-        "yaml": true,
         "markdown": true,
-        "plaintext": true
+        "python": true,
+        "yaml": true
     },
     "djlint.showInstallError": false,
     "workbench.activityBar.location": "top",
