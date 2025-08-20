@@ -37,15 +37,16 @@
         "activityBarBadge.background": "#844905",
         "tree.indentGuidesStroke": "#e2df1e",
         // Status & Title Bar
-        "statusBar.foreground": "#c6ba10",
-        "titleBar.activeForeground": "#e9e9d9",
+        "statusBar.background": "#33393d",
+        "statusBar.foreground": "#d4c70e",
+        "titleBar.activeBackground": "default",
+        "titleBar.activeForeground": "#dfdfac",
         // Terminal
-        "terminal.background": "#121329",
+        "terminal.background": "#30303a",
         // Tabs
-        "tab.activeBackground": "#4d4d60",
-        "tab.activeForeground": "#e9e9d9",
+        "tab.activeBackground": "#5c5c75",
+        "tab.activeForeground": "#e4e4a6",
         "tab.activeBorderTop": "#ad7d46",
-        "tab.inactiveBackground": "#513f41",
         "tab.border": "#f40921",
         "editorGroupHeader.tabsBackground": "#424457",
         "editorGroupHeader.border": "#7d84ec"
@@ -59,7 +60,7 @@
             {
                 "scope": "comment",
                 "settings": {
-                    "foreground": "#777777",
+                    "foreground": "#888181",
                     "fontStyle": "italic"
                 }
             },
