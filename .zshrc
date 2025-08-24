@@ -104,3 +104,6 @@ alias lt='ls --tree'
 
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 export PATH="$PATH:$HOME/go/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform

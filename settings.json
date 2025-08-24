@@ -160,7 +160,7 @@
     // 9. INTEGRATED TERMINAL
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
-    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontWeight": "600",
     "terminal.integrated.cursorStyle": "underline",
@@ -208,7 +208,10 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
     "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
         "markdown": true,
+        "scminput": false,
         "python": true,
         "yaml": true
     },
@@ -231,4 +234,5 @@
     "git.ignoreRebaseWarning": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "diffEditor.maxComputationTime": 0
 }
