@@ -1,7 +1,5 @@
-# C:\Users\Zulu\AppData\Roaming\ruff\ruff.toml
-
 # ==========================================================================
-# RUFF CONFIGURATION - DEVNET OPTIMIZED (REFINED)
+# RUFF CONFIGURATION - DEVNET OPTIMIZED (REFINED 2025)
 # High-performance Python linting and formatting for network automation
 # ==========================================================================
 
@@ -12,7 +10,7 @@
 output-format = "grouped" # Clean, organized error reporting
 target-version = "py312"  # Latest Python features and syntax
 line-length = 88          # Explicit line length setting
-preview = true            # Enable preview rules for cutting-edge features
+preview = true            # Enable preview rules for cutting-edge features (stable in Ruff 0.6+)
 
 # --------------------------------------------------------------------------
 # PER-FILE RULE CUSTOMIZATION
@@ -29,7 +27,6 @@ preview = true            # Enable preview rules for cutting-edge features
     "PLR2004",
 ] # Test files - allow asserts, hardcoded values, magic numbers
 "scripts/**" = [
-    "T201",
     "S603",
     "S607",
     "PLR0913",
@@ -43,6 +40,7 @@ preview = true            # Enable preview rules for cutting-edge features
     "S106",
 ]
 "**/config/**" = ["S105", "S106"] # Config files - similar to settings
+"*.ipynb" = ["E501", "F401"] # Jupyter notebooks - relax line length and unused imports
 
 # --------------------------------------------------------------------------
 # EXTENSION-SPECIFIC CONFIGURATIONS
@@ -121,6 +119,7 @@ ignore = [
     "D203", # One-blank-line-before-class (conflicts with some formatters)
     "D212", # Multi-line docstring summary should start on the first line
     "D401", # First line of docstring should be in imperative mood
+    "T201", #
 
     # DevNet/API Flexibility
     "N803", # Allow mixed-case arguments (common with external APIs)

@@ -1,7 +1,7 @@
 {
     // ==========================================================================
     // VS CODE CONFIGURATION
-    // High-performance, minimalist development environment
+    // High-performance, minimalist development environment (Updated 2025)
     // ==========================================================================
     // --------------------------------------------------------------------------
     // 1. WORKBENCH & INTERFACE LAYOUT
@@ -108,16 +108,22 @@
     // --------------------------------------------------------------------------
     // Python Interpreter and Environment
     "python.useEnvironmentsExtension": true,
-    // Pylance Language Server
+    // Pylance Language Server (for type checking, keep basic to minimize overlaps)
     "python.languageServer": "Pylance",
-    // "python.analysis.typeCheckingMode": "basic",
-    // 🔥 UPDATED: Ruff Integration
+    "python.analysis.typeCheckingMode": "basic",
+    // Disable built-in linters to avoid conflicts with Ruff extension
+    "python.linting.enabled": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
+    "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
     "ruff.organizeImports": true,
+    "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "./venv/Scripts/python.exe",
-    // Python-Specific Settings
+    "python.defaultInterpreterPath": "/bin/python3",
+    // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
@@ -126,6 +132,16 @@
         },
         "editor.formatOnSave": true
     },
+    // Jupyter Notebook Support (aligned with Ruff)
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
+    // Suppress Pylance diagnostics overlaps if needed
+    "python.analysis.ignore": [
+        "*"
+    ],
     // --------------------------------------------------------------------------
     // 8. LANGUAGE-SPECIFIC CONFIGURATIONS (NON-PYTHON)
     // Formatters and settings for different file types
@@ -208,9 +224,9 @@
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
-        "markdown": true,
+        "markdown": false,
         "scminput": false,
         "python": true,
         "yaml": true
@@ -234,5 +250,5 @@
     "git.ignoreRebaseWarning": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "diffEditor.maxComputationTime": 0
+    "diffEditor.maxComputationTime": 0,
 }
