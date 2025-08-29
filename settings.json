@@ -251,4 +251,5 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "diffEditor.maxComputationTime": 0,
+    "postman.mcp.notifications.postmanMCP": false,
 }
