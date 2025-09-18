@@ -19,7 +19,6 @@
     // 2. VISUAL THEME & APPEARANCE
     // Theme, font, and icon configurations
     // --------------------------------------------------------------------------
-    "workbench.colorTheme": "GitHub Dark",
     "workbench.iconTheme": "material-icon-theme",
     // Font Settings
     "editor.fontFamily": "JetBrains Mono",
@@ -111,10 +110,6 @@
     // Pylance Language Server (for type checking, keep basic to minimize overlaps)
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "basic",
-    // Disable built-in linters to avoid conflicts with Ruff extension
-    "python.linting.enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": false,
     // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
     "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
@@ -122,7 +117,7 @@
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/bin/python3",
+    "python.defaultInterpreterPath": "/bin/python",
     // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -147,30 +142,8 @@
     // Formatters and settings for different file types
     // --------------------------------------------------------------------------
     // Django/Jinja Templates (djlint formatter)
-    "[html][django-html][jinja][jinja-html]": {
-        "editor.defaultFormatter": "monosans.djlint",
-        "editor.tabSize": 2
-    },
-    "djlint.useVenv": false,
-    // JSON Configuration
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    // YAML Configuration
-    "[yaml]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "keep",
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.defaultColorDecorators": "never",
-        "editor.quickSuggestions": {
-            "strings": true,
-            "other": true,
-            "comments": false
-        }
+    "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
+        "editor.defaultFormatter": "monosans.djlint"
     },
     // --------------------------------------------------------------------------
     // 9. INTEGRATED TERMINAL
@@ -222,14 +195,13 @@
     "workbench.editor.empty.hint": "hidden",
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.productIconTheme": "a-file-icon-vscode-product-icon-theme",
     "github.copilot.enable": {
-        "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
         "python": true,
-        "yaml": true
+        "yaml": true,
+        "*": false
     },
     "djlint.showInstallError": false,
     "workbench.activityBar.location": "top",
@@ -243,7 +215,7 @@
         "/tmp/postman-http-request-post-response.instructions.md": true,
         "/tmp/postman-http-request-pre-request.instructions.md": true
     },
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.fontLigatures.enabled": true,
     "typescript.tsserver.web.typeAcquisition.enabled": false,
     "typescript.tsserver.web.projectWideIntellisense.enabled": false,
@@ -252,4 +224,10 @@
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "diffEditor.maxComputationTime": 0,
     "postman.mcp.notifications.postmanMCP": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "[html]": {
+        "editor.defaultFormatter": "monosans.djlint"
+    },
+    "djlint.closeVoidTags": true,
+    "workbench.colorTheme": "One Monokai",
 }
