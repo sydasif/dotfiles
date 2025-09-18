@@ -22,6 +22,7 @@
     "workbench.iconTheme": "material-icon-theme",
     // Font Settings
     "editor.fontFamily": "JetBrains Mono",
+    "workbench.colorTheme": "One Monokai",
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.fontWeight": "normal",
@@ -37,8 +38,6 @@
         "tree.indentGuidesStroke": "#e2df1e",
         // Status & Title Bar
         "statusBar.background": "#33393d",
-        "statusBar.foreground": "#d4c70e",
-        "titleBar.activeBackground": "default",
         "titleBar.activeForeground": "#dfdfac",
         // Terminal
         "terminal.background": "#30303a",
@@ -228,6 +227,5 @@
     "[html]": {
         "editor.defaultFormatter": "monosans.djlint"
     },
-    "djlint.closeVoidTags": true,
-    "workbench.colorTheme": "One Monokai",
+    "djlint.closeVoidTags": true
 }
