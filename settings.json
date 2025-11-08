@@ -116,7 +116,7 @@
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/bin/python",
+    "python.defaultInterpreterPath": "/bin/python3",
     // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -227,5 +227,14 @@
     "[html]": {
         "editor.defaultFormatter": "monosans.djlint"
     },
-    "djlint.closeVoidTags": true
+    "djlint.closeVoidTags": true,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "chat.mcp.gallery.enabled": true,
+    "chat.mcp.autostart": "onlyNew",
+    "python.terminal.useEnvFile": true,
+    "editor.unicodeHighlight.allowedLocales": {
+        "cs": true
+    },
+    "postman.settings.dotenv-detection-notification-visibility": false,
+    "application.shellEnvironmentResolutionTimeout": 14
 }

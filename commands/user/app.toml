@@ -1,0 +1,17 @@
+# Clean web framework code (Flask & Django)
+
+name = "clean:app"
+description = "Clean web framework code (Flask & Django)"
+prompt = """
+# Flask Focus
+Review and clean routes and blueprints.
+Remove unused functions or helpers.
+Simplify the app factory and configuration flow.
+Make error handlers clear and consistent.
+
+# Django Focus
+Review views, serializers, and forms.
+Remove unused middleware, signals, and stale migration files.
+Fix repeated ORM queries or helper code.
+Clarify model methods that perform hidden logic.
+"""

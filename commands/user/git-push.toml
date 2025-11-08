@@ -1,0 +1,5 @@
+# git push
+
+name = "git:push"
+description = "Pushes committed changes to the remote repository."
+prompt = "git push"
