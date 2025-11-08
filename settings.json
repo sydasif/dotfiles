@@ -116,7 +116,7 @@
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/bin/python3",
+    "python.defaultInterpreterPath": "/usr/bin/python",
     // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -214,7 +214,7 @@
         "/tmp/postman-http-request-post-response.instructions.md": true,
         "/tmp/postman-http-request-pre-request.instructions.md": true
     },
-    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontLigatures.enabled": true,
     "typescript.tsserver.web.typeAcquisition.enabled": false,
     "typescript.tsserver.web.projectWideIntellisense.enabled": false,
@@ -236,5 +236,5 @@
         "cs": true
     },
     "postman.settings.dotenv-detection-notification-visibility": false,
-    "application.shellEnvironmentResolutionTimeout": 14
+    "application.shellEnvironmentResolutionTimeout": 10
 }
