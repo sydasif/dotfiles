@@ -8,6 +8,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ------------------------------
+# Powerlevel10k Config
+# ------------------------------
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# ------------------------------
 # Zinit Plugin Manager Setup
 # ------------------------------
 # Define where Zinit will store itself and its plugins.
@@ -67,11 +72,6 @@ setopt hist_ignore_all_dups    # Remove all older duplicates
 setopt hist_save_no_dups       # Don’t save duplicates in history file
 setopt hist_ignore_dups        # Ignore duplicate commands
 setopt hist_find_no_dups       # Don’t show duplicate matches during search
-
-# ------------------------------
-# Powerlevel10k Config
-# ------------------------------
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ------------------------------
 # Completion Styling
