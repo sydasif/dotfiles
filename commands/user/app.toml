@@ -3,15 +3,42 @@
 name = "clean:app"
 description = "Clean web framework code (Flask & Django)"
 prompt = """
+# Core Cleanup
+
+Delete commented or abandoned code.
+Keep all behavior, APIs, and routes stable.
+
+# Readability and Structure
+
+Break large functions into smaller parts.
+Rename confusing functions, variables, and files.
+Improve directory layout by reorganizing misplaced files and grouping related modules.
+Make error messages direct and easy to follow.
+Remove empty folders or unused modules.
+
 # Flask Focus
+
 Review and clean routes and blueprints.
 Remove unused functions or helpers.
 Simplify the app factory and configuration flow.
 Make error handlers clear and consistent.
 
 # Django Focus
+
 Review views, serializers, and forms.
 Remove unused middleware, signals, and stale migration files.
 Fix repeated ORM queries or helper code.
 Clarify model methods that perform hidden logic.
+
+# Nornir Focus
+
+Clean and streamline inventory loading.
+Unify repeated task plugins.
+Remove duplicate device facts parsers.
+Tidy connection setup and remove unused options.
+
+Run black, isort, flake8, and pytest.
+Fix style issues and warnings.
+Confirm all tests pass.
+Summarize each change by file.
 """
