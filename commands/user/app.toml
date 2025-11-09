@@ -1,44 +1,82 @@
-# Clean web framework code (Flask & Django)
-
 name = "clean:app"
 description = "Clean web framework code (Flask & Django)"
 prompt = """
-# Core Cleanup
+You are a code cleanup specialist. Refactor this Flask/Django codebase while preserving all behavior, APIs, and routes.
 
-Delete commented or abandoned code.
-Keep all behavior, APIs, and routes stable.
+## Core Rules
+- Delete all commented, dead, and abandoned code
+- Maintain 100% backward compatibility
+- Run `ruff check . --fix && ruff format .` after changes
+- Run `pytest` - all tests must pass
+- Add missing tests for uncovered critical paths
 
-# Readability and Structure
+## Readability & Structure
+- Break functions over 50 lines into focused units
+- Rename unclear variables: `data` to `user_profile`, `x` to `request_id`
+- Reorganize misplaced files into logical modules
+- Remove empty directories and unused imports
+- Make error messages actionable: "Invalid input" to "Email must contain @"
 
-Break large functions into smaller parts.
-Rename confusing functions, variables, and files.
-Improve directory layout by reorganizing misplaced files and grouping related modules.
-Make error messages direct and easy to follow.
-Remove empty folders or unused modules.
+## Flask Cleanup
+**Routes & Blueprints**
+- Remove unused endpoints and duplicate routes
+- Consolidate blueprint registration
+- Move business logic out of route handlers to services
 
-# Flask Focus
+**App Factory**
+- Simplify initialization code
+- Remove unused config variables
+- Centralize extension setup (db, cache, etc.)
 
-Review and clean routes and blueprints.
-Remove unused functions or helpers.
-Simplify the app factory and configuration flow.
-Make error handlers clear and consistent.
+**Error Handlers**
+- Standardize JSON error responses: `{"error": "msg", "code": 400}`
+- Remove duplicate handlers
+- Add missing 404, 500 handlers
 
-# Django Focus
+**Utilities**
+- Delete unused helper functions
+- Consolidate duplicate code (DRY)
+- Move helpers to appropriate modules
 
-Review views, serializers, and forms.
-Remove unused middleware, signals, and stale migration files.
-Fix repeated ORM queries or helper code.
-Clarify model methods that perform hidden logic.
+## Django Cleanup
+**Views & Serializers**
+- Remove unused views and serializers
+- Consolidate duplicate validation logic
+- Move complex logic to service layer
 
-# Nornir Focus
+**Models & ORM**
+- Fix N+1 queries with `select_related()` / `prefetch_related()`
+- Remove redundant model methods
+- Simplify hidden business logic
+- Add db indexes for frequent queries
 
-Clean and streamline inventory loading.
-Unify repeated task plugins.
-Remove duplicate device facts parsers.
-Tidy connection setup and remove unused options.
+**Middleware & Signals**
+- Remove unused middleware
+- Clean up orphaned signal receivers
+- Document middleware dependencies
 
-Run black, ruff, and pytest.
-Fix style issues and warnings.
-Confirm all tests pass.
-Summarize each change by file.
+**Migrations & Tasks**
+- Remove stale migration files
+- Squash old migrations
+- Unify duplicate Celery/task plugins
+- Clean inventory loading logic
+
+**Infrastructure**
+- Remove duplicate device/fact parsers
+- Simplify connection setup
+- Delete unused configuration options
+
+## Output Format
+Provide a file-by-file summary:
+```
+src/routes/users.py
+- Removed unused get_user_stats() function
+- Split create_user() into validate_user() + save_user()
+- Fixed N+1 query in user list endpoint
+
+tests/test_users.py
+- Added missing test for user creation validation
+```
+
+Prioritize changes by impact: dead code removal first, then DRY violations, then refactoring.
 """
