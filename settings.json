@@ -116,7 +116,7 @@
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/usr/bin/python",
+    "python.defaultInterpreterPath": "/bin/python",
     // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -149,8 +149,7 @@
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontWeight": "600",
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.gpuAcceleration": "on",

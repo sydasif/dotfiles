@@ -37,7 +37,7 @@ Unify repeated task plugins.
 Remove duplicate device facts parsers.
 Tidy connection setup and remove unused options.
 
-Run black, isort, flake8, and pytest.
+Run black, ruff, and pytest.
 Fix style issues and warnings.
 Confirm all tests pass.
 Summarize each change by file.
