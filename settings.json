@@ -9,9 +9,11 @@
     // --------------------------------------------------------------------------
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.editor.editorActionsLocation": "titleBar",
     "workbench.settings.editor": "json",
     "workbench.reduceMotion": "on",
+    "workbench.colorTheme": "One Monokai",
     "breadcrumbs.enabled": false,
     "window.density.editorTabHeight": "compact",
     "window.menuBarVisibility": "toggle",
@@ -19,12 +21,10 @@
     // 2. VISUAL THEME & APPEARANCE
     // Theme, font, and icon configurations
     // --------------------------------------------------------------------------
-    "workbench.iconTheme": "material-icon-theme",
     // Font Settings
     "editor.fontFamily": "JetBrains Mono",
-    "workbench.colorTheme": "One Monokai",
     "editor.fontLigatures": true,
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontWeight": "normal",
     // --------------------------------------------------------------------------
     // 3. COLOR CUSTOMIZATIONS
@@ -108,7 +108,8 @@
     "python.useEnvironmentsExtension": true,
     // Pylance Language Server (for type checking, keep basic to minimize overlaps)
     "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
     // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
     "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
@@ -116,7 +117,6 @@
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
     // Global Formatting
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/bin/python",
     // Python-Specific Settings (scoped actions to prevent extension conflicts)
     "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
@@ -126,24 +126,10 @@
         },
         "editor.formatOnSave": true
     },
-    // Jupyter Notebook Support (aligned with Ruff)
-    "notebook.formatOnSave.enabled": true,
-    "notebook.codeActionsOnSave": {
-        "notebook.source.fixAll": "explicit",
-        "notebook.source.organizeImports": "explicit"
-    },
     // Suppress Pylance diagnostics overlaps if needed
     "python.analysis.ignore": [
         "*"
     ],
-    // --------------------------------------------------------------------------
-    // 8. LANGUAGE-SPECIFIC CONFIGURATIONS (NON-PYTHON)
-    // Formatters and settings for different file types
-    // --------------------------------------------------------------------------
-    // Django/Jinja Templates (djlint formatter)
-    "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
-        "editor.defaultFormatter": "monosans.djlint"
-    },
     // --------------------------------------------------------------------------
     // 9. INTEGRATED TERMINAL
     // Terminal appearance and behavior settings
@@ -175,11 +161,8 @@
         "rgba(79,236,236,0.3)"
     ],
     "indentRainbow.errorColor": "rgba(102, 44, 44, 0.6)",
-    "redhat.telemetry.enabled": false,
     "extensions.autoUpdate": false,
     "extensions.autoCheckUpdates": false,
-    "containerlab.showWelcomePage": false,
-    "containerlab.skipCleanupWarning": true,
     "cSpell.userWords": [
         "ceos",
         "clab",
@@ -201,32 +184,14 @@
         "yaml": true,
         "*": false
     },
-    "djlint.showInstallError": false,
     "workbench.activityBar.location": "top",
     "remote.autoForwardPortsSource": "hybrid",
-    "chat.instructionsFilesLocations": {
-        ".github/instructions": true,
-        "/tmp/postman-collections-post-response.instructions.md": true,
-        "/tmp/postman-collections-pre-request.instructions.md": true,
-        "/tmp/postman-folder-post-response.instructions.md": true,
-        "/tmp/postman-folder-pre-request.instructions.md": true,
-        "/tmp/postman-http-request-post-response.instructions.md": true,
-        "/tmp/postman-http-request-pre-request.instructions.md": true
-    },
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontLigatures.enabled": true,
-    "typescript.tsserver.web.typeAcquisition.enabled": false,
-    "typescript.tsserver.web.projectWideIntellisense.enabled": false,
-    "git.ignoreRebaseWarning": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "diffEditor.maxComputationTime": 0,
-    "postman.mcp.notifications.postmanMCP": false,
     "terminal.integrated.stickyScroll.enabled": false,
-    "[html]": {
-        "editor.defaultFormatter": "monosans.djlint"
-    },
-    "djlint.closeVoidTags": true,
     "github.copilot.nextEditSuggestions.enabled": false,
     "chat.mcp.gallery.enabled": true,
     "chat.mcp.autostart": "onlyNew",
@@ -234,6 +199,4 @@
     "editor.unicodeHighlight.allowedLocales": {
         "cs": true
     },
-    "postman.settings.dotenv-detection-notification-visibility": false,
-    "application.shellEnvironmentResolutionTimeout": 10
 }
