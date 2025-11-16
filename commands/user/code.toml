@@ -1,0 +1,7 @@
+name = "clean:code"
+description = "Check code effect by changes"
+prompt = """
+Check leftover code effect in code/app.
+
+Dead code removal, DRY violations, and refactoring any effected code.
+"""

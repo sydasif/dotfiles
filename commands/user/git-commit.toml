@@ -1,8 +1,0 @@
-# git commit
-
-name = "git:commit"
-description = "Commits changes to the local repository."
-prompt = "git commit -m \"{{ message }}\""
-
-[arguments]
-message = { type = "string", description = "The commit message." }

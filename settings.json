@@ -9,11 +9,10 @@
     // --------------------------------------------------------------------------
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Monokai",
     "workbench.editor.editorActionsLocation": "titleBar",
     "workbench.settings.editor": "json",
     "workbench.reduceMotion": "on",
-    "workbench.colorTheme": "One Monokai",
     "breadcrumbs.enabled": false,
     "window.density.editorTabHeight": "compact",
     "window.menuBarVisibility": "toggle",
@@ -109,7 +108,7 @@
     // Pylance Language Server (for type checking, keep basic to minimize overlaps)
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "standard",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.defaultInterpreterPath": "/bin/python",
     // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
     "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
@@ -167,6 +166,7 @@
         "ceos",
         "clab",
         "Containerlab",
+        "groq",
         "mgmt",
         "netmiko",
         "nornir",
@@ -199,4 +199,7 @@
     "editor.unicodeHighlight.allowedLocales": {
         "cs": true
     },
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.copyOnSelection": true,
+    "redhat.telemetry.enabled": false,
 }
