@@ -1,0 +1,12 @@
+name = "secure:code"
+description = "Scan and fix security issues in code"
+prompt = """
+Act as a security auditor. Review the code for vulnerabilities including:
+
+- SQL injection, XSS, CSRF, and command injection risks
+- Unsafe use of user input
+- Hardcoded secrets or credentials
+- Outdated dependencies with known vulnerabilities
+- Provide fixes and recommendations
+- Summarize all changes per file
+"""

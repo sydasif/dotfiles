@@ -1,0 +1,7 @@
+name = "review:code"
+description = "Assess code impact after refactoring"
+prompt = """
+Review the project for dead code, DRY issues, and any components affected by recent refactoring.
+
+If everything passes review, proceed with committing the changes.
+"""

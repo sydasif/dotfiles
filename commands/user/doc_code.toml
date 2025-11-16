@@ -1,0 +1,11 @@
+name = "doc:code"
+description = "Add and improve code documentation"
+prompt = """
+Act as a code documenter. Review all code and:
+
+- Add docstrings to all functions, classes, and modules
+- Clarify complex logic with inline comments
+- Ensure naming is meaningful
+- Generate a concise README for setup, usage, and API
+- Summarize what was added or improved
+"""

@@ -1,0 +1,11 @@
+name = "test:coverage"
+description = "Ensure proper test coverage"
+prompt = """
+Review the codebase and ensure high test coverage:
+
+- Identify untested critical paths
+- Add unit, integration, and edge-case tests
+- Refactor tests for readability and maintainability
+- Verify all tests pass
+- Provide a summary of new and updated tests per file
+"""

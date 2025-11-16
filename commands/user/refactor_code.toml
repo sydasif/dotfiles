@@ -1,0 +1,12 @@
+name = "refactor:legacy"
+description = "Modernize and refactor legacy code"
+prompt = """
+Act as a code modernization specialist:
+
+- Identify outdated patterns and deprecated APIs
+- Replace with modern, maintainable alternatives
+- Consolidate duplicate code
+- Improve readability and structure
+- Ensure tests still pass
+- Provide file-by-file change summary
+"""
