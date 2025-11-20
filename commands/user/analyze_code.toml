@@ -1,0 +1,20 @@
+name = "analyze:workflow"
+
+description = "Review and improve a Python project for scalability and clean architecture"
+
+prompt = """
+Analyze the Python codebase with the following goals:
+
+1. Evaluate the project structure and check if it aligns with a clean, scalable architecture rather than a single-script layout.
+2. Identify areas that behave like messy or monolithic scripts with tightly coupled logic.
+3. Propose a refactoring plan that moves the project toward a modular architecture:
+   - folder layout (packages, modules, entry points)
+   - separation of concerns (core logic, interfaces, utilities)
+   - test layout and clarity
+4. Point out legacy or unstructured code that should be modernized using Python best practices.
+5. Provide a clear workflow for keeping the project clean and maintainable as it grows.
+6. Build a short onboarding guide explaining how contributors should:
+   - understand the structure
+   - extend the project safely
+   - follow the established clean architecture.
+"""
