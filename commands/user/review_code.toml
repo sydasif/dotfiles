@@ -1,7 +1,7 @@
 name = "review:code"
 description = "Assess code impact after refactoring"
 prompt = """
-Review the project for dead code, DRY issues, and any components affected by recent refactoring.
-
+Review the project for any components affected by recent refactoring.
+Check git log to understand code changes.
 If everything passes review, proceed with committing the changes.
 """
