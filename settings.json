@@ -164,6 +164,7 @@
     "extensions.autoCheckUpdates": false,
     "cSpell.userWords": [
         "ceos",
+        "checkpointer",
         "clab",
         "Containerlab",
         "groq",
