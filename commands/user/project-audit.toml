@@ -1,0 +1,12 @@
+name = "project:audit"
+description = "Analyze project structure for scalability and clean architecture"
+prompt = """
+Act as a Software Architect. Analyze the current project structure (folders, modules, entry points).
+
+1. **Evaluate**: Does it align with Clean Architecture? (Separation of concerns, modularity).
+2. **Identify**: Point out monolithic scripts or tightly coupled logic.
+3. **Propose**: A refactoring plan to move towards a scalable package layout.
+4. **Onboarding**: Create a short guide on how to extend the project safely.
+
+Do not rewrite code yet; focus on the structural layout.
+"""

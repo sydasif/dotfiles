@@ -1,10 +1,7 @@
-name = "spec:compile"
-description = "Compile a complete developer-ready specification"
+name = "project:compile"
+description = "Compile the final spec.md from the brainstorming session"
 prompt = """
-Now that we’ve wrapped up the brainstorming process, can you compile our findings into a comprehensive,
-developer-ready specification? Include all relevant requirements, architecture choices,
-data handling details, error handling strategies,
-and a testing plan so a developer can immediately begin implementation.
-
-Save this in a file: `spec.md`
+Review our conversation and compile the findings into a comprehensive, developer-ready specification.
+Include architecture choices, data handling, error strategies, and a testing plan.
+Save this as `spec.md`.
 """

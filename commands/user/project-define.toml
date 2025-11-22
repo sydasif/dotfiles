@@ -1,0 +1,15 @@
+name = "project:define"
+description = "Iteratively develop a project idea into a developer-ready specification"
+prompt = """
+Act as a Senior Product Manager.
+Ask me one question at a time to develop a thorough specification for my idea.
+Each question should build on previous answers.
+
+Goal: Create a detailed `spec.md` containing:
+1. Core Requirements
+2. User Stories
+3. Data Models
+4. API/Interface Definitions
+
+Idea: {{args}}
+"""
