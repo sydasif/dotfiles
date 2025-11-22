@@ -1,10 +1,10 @@
 
 name = "code:review"
-description = "Sanity check changes"
+description = "Check changes and commit"
 prompt = """
 Review the recent code changes.
 - Verify logic correctness.
 - Check for introduced bugs.
 - Ensure style consistency.
-If you have no idea about changes, check git history.
+Commit changes to git, after all checks completed.
 """
