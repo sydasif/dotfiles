@@ -1,7 +1,10 @@
-name = "review:code"
-description = "Assess code impact after refactoring"
+
+name = "code:review"
+description = "Sanity check changes"
 prompt = """
-Review the project for any components affected by recent refactoring.
-Check git log to understand code changes.
-If everything passes review, proceed with committing the changes.
+Review the recent code changes.
+- Verify logic correctness.
+- Check for introduced bugs.
+- Ensure style consistency.
+If you have no idea about changes, check git history.
 """

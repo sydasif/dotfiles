@@ -1,12 +1,9 @@
-name = "refactor:legacy"
-description = "Modernize and refactor legacy code"
+name = "code:refactor"
+description = "Modernize legacy patterns (Structure focus)"
 prompt = """
-Act as a code modernization specialist:
-
-- Identify outdated patterns and deprecated APIs
-- Replace with modern, maintainable alternatives
-- Consolidate duplicate code
-- Improve readability and structure
-- Ensure tests still pass
-- Provide file-by-file change summary
+Act as a Python Expert. Refactor the code for modern standards:
+- Replace legacy patterns with modern equivalents (e.g., use f-strings, dataclasses).
+- Break large functions into smaller, single-purpose functions.
+- Apply DRY: Extract duplicate logic into utilities.
+- Ensure behavior remains exactly the same.
 """

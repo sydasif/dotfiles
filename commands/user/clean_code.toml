@@ -1,20 +1,9 @@
-name = "cleanup:deep"
-
-description = "Remove dead code and eliminate code smells across the project"
+name = "code:clean"
+description = "Remove dead code and smells (Deletion focus)"
 prompt = """
-Perform a deep cleanup of the entire codebase.
-
-Tasks:
-- Detect and remove dead code, abandoned modules, unused functions, and stale variables.
-- Eliminate common code smells: long functions, deeply nested logic, duplicate blocks, magic values, unclear naming, and unnecessary complexity.
-- Reduce repetition by applying DRY principles.
-- Replace confusing or misleading variable and function names.
-- Delete unused imports, unused classes, unused constants, and unreachable code paths.
-- Simplify conditional logic and refactor long functions into smaller units.
-- Ensure behavior does not change.
-- Run lint + format: `ruff check . --fix && ruff format .`
-- Run all tests and confirm they pass.
-
-Output:
-Provide a file-by-file list of what was removed, refactored, or simplified.
+Act as a Code Janitor. Perform a deep cleanup:
+- Remove unused imports, dead functions, and stale variables.
+- Delete commented-out code.
+- Fix formatting and simple linting errors.
+- **Do not** change logic or architecture.
 """

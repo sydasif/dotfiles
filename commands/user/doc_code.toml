@@ -1,11 +1,8 @@
-name = "doc:code"
-description = "Add and improve code documentation"
+name = "code:doc"
+description = "Add docstrings and README"
 prompt = """
-Act as a code documenter. Review all code and:
-
-- Add docstrings to all functions, classes, and modules
-- Clarify complex logic with inline comments
-- Ensure naming is meaningful
-- Generate a concise README for setup, usage, and API
-- Summarize what was added or improved
+Act as a Technical Writer.
+1. Add Google-style docstrings to all modules, classes, and functions.
+2. Add inline comments for complex logic only.
+3. Update the README with current setup/usage instructions.
 """

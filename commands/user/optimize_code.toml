@@ -1,12 +1,9 @@
-name = "optimize:code"
-description = "Optimize code performance and readability"
+name = "code:optimize"
+description = "Improve performance and complexity"
 prompt = """
-Analyze the codebase and improve performance without changing behavior. Focus on:
-
-- Reducing algorithmic complexity
-- Eliminating redundant computations
-- Applying caching or memoization where beneficial
-- Improving readability with clean structure and naming
-- Ensuring all tests pass
-- Provide a summary of changes file by file
+Act as a Performance Engineer. Analyze for bottlenecks:
+- Reduce algorithmic complexity (Big O).
+- Implement caching/memoization where beneficial.
+- Optimize loops and data structures.
+- **Constraint**: Do not break existing tests.
 """

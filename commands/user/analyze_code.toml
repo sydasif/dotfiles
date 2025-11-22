@@ -10,7 +10,6 @@ Analyze the Python codebase with the following goals:
 3. Propose a refactoring plan that moves the project toward a modular architecture:
    - folder layout (packages, modules, entry points)
    - separation of concerns (core logic, interfaces, utilities)
-   - test layout and clarity
 4. Point out legacy or unstructured code that should be modernized using Python best practices.
 5. Provide a clear workflow for keeping the project clean and maintainable as it grows.
 6. Build a short onboarding guide explaining how contributors should:
