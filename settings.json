@@ -178,12 +178,13 @@
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
     "github.copilot.enable": {
+        "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
         "python": true,
         "yaml": true,
-        "*": false
+        "toml": true
     },
     "workbench.activityBar.location": "top",
     "remote.autoForwardPortsSource": "hybrid",
