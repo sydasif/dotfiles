@@ -2,6 +2,11 @@
   "env": {
     "ANTHROPIC_BASE_URL": "http://127.0.0.1:3455"
   },
+  "permissions": {
+    "deny": [
+      "Read(./.env)"
+    ]
+  },
   "hooks": {
     "PostToolUse": [
       {
@@ -19,10 +24,7 @@
     "type": "command",
     "command": "/bin/bash /home/zulu/.claude/hooks/statusline.sh"
   },
-  "enabledPlugins": {},
-  "permissions": {
-    "deny": [
-      "Read(./.env)"
-    ]
+  "enabledPlugins": {
+    "context7@claude-plugins-official": true
   }
 }
