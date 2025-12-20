@@ -1,0 +1,28 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://127.0.0.1:3455"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/bash /home/zulu/.claude/hooks/python_formatter.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "/bin/bash /home/zulu/.claude/hooks/statusline.sh"
+  },
+  "enabledPlugins": {},
+  "permissions": {
+    "deny": [
+      "Read(./.env)"
+    ]
+  }
+}
