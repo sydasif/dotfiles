@@ -1,101 +1,46 @@
 # --------------------------------------------------------------------------
-# GLOBAL SETTINGS
-# Core ruff behavior and output configuration
-# --------------------------------------------------------------------------
-output-format = "grouped" # Clean, organized error reporting
-line-length = 88          # Explicit line length setting
-
-# --------------------------------------------------------------------------
-# EXTENSION-SPECIFIC CONFIGURATIONS
-# Fine-tuning for specific linting extensions
+# MINIMAL RUFF CONFIGURATION
+# Essential linting and formatting for Python projects
 # --------------------------------------------------------------------------
 
-# Type Annotation Flexibility
-[lint.flake8-annotations]
-allow-star-arg-any = true  # Allow `*args: Any` for API flexibility
-suppress-dummy-args = true # Don't require annotations for dummy args
+# Core settings
+output-format = "grouped"
+line-length = 88
 
-# Import Sorting
-[lint.isort]
-force-single-line = false      # Allow grouped imports
-split-on-trailing-comma = true # Better diff readability
-
-# --------------------------------------------------------------------------
-# LINTING RULES CONFIGURATION
-# Code quality, style, and error detection settings
-# --------------------------------------------------------------------------
 [lint]
-
-extend-select = [
-    # Core Python Quality
-    "F", # Pyflakes – runtime errors, undefined variables
-    "E", # Pycodestyle – basic PEP8 style
-    "W", # Pycodestyle – warnings
-
-    # Code Organization & Modernization
-    "I",   # isort – import sorting
-    "UP",  # pyupgrade – modern syntax (Python 3.13 ready)
-    "B",   # bugbear – common bugs and anti-patterns
-    "SIM", # simplify – logic simplification suggestions
-
-    # Framework & Domain Specific
-    "DJ",    # Django-specific checks and best practices
-    "ASYNC", # Async/await best practices (common in network automation)
-
-    # Code Quality & Standards
-    "N",   # naming conventions (PEP8 compliant)
-    "PIE", # unnecessary code patterns
-    "RET", # return statement improvements
-    "PTH", # prefer pathlib over os.path
-    "S",   # bandit – security issues detection
-    "C90", # mccabe – complexity checking
-    "T20", # flake8-print – catch debug prints
-
-    # Additional Quality Checks
-    "PL",   # Pylint rules (comprehensive code quality)
-    "FLY",  # flynt – string formatting improvements
-    "PERF", # performance anti-patterns
-    "FURB", # refurb – modernization suggestions
-    "LOG",  # logging best practices
-    "G",    # logging format string issues
+# Select only essential rule sets
+select = [
+    "E",  # pycodestyle errors (basic style)
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes (runtime errors)
+    "B",  # bugbear (common bugs)
+    "I",  # isort (import ordering)
+    "N",  # naming conventions
+    "UP", # pyupgrade (modern syntax)
+    "S",  # security (bandit subset)
 ]
 
+# Minimal ignores for practical development
 ignore = [
-    "D1",      # Ignore all missing docstring checks
-    "D203",    # One-blank-line-before-class (conflicts with some formatters)
-    "D212",    # Multi-line docstring summary should start on the first line
-    "D401",    # First line of docstring should be in imperative mood
-    "T201",    #
-    "N803",    # Allow mixed-case arguments (common with external APIs)
-    "N806",    # Allow mixed-case variables (for data from network devices/APIs)
-    "RET504",  # Allow assignments before a return statement
-    "PIE804",  # Allow unnecessary dict kwargs (`dict(**foo)`)
-    "S101",    # Allow assert statements (already handled per-file)
-    "PLR2004", # Magic numbers (network automation often uses port numbers, etc.)
-    "PLR0913", # Too many arguments (network functions often need many parameters)
-    "PLR0912", # Too many branches (network automation often complex)
-    "PLR0915", # Too many statements (some network operations are inherently long)
-    "PERF203", # Try-except in loop (sometimes necessary for network operations)
-    "G004",    # f-string in logging (sometimes more readable)
-    "S201",
+    "E501", # Line too long (handled by formatter)
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D102", # Missing docstring in public method
+    "D103", # Missing docstring in public function
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D106", # Missing docstring in public nested class
+    "D107", # Missing docstring in __init__
 ]
 
 # Auto-fix behavior
-fixable = ["ALL"] # Allow Ruff to fix everything it can
-unfixable = [
-    "F401", # Prevent auto-removal of unused imports (e.g. __init__.py or future use)
-    "F841", # Prevent auto-removal of assigned-but-unused variables (useful in REPL/testing)
-]
+fixable = ["ALL"]
+unfixable = ["F401"] # Preserve unused imports
 
 # --------------------------------------------------------------------------
-# CODE FORMATTING CONFIGURATION
-# Consistent code style and presentation
+# FORMATTING CONFIGURATION
 # --------------------------------------------------------------------------
 [format]
-quote-style = "preserve"
-skip-magic-trailing-comma = true # Manual control over trailing commas
-docstring-code-line-length = 88  # Match main line length for code in docstrings
-docstring-code-format = true     # Format code examples in docstrings
-line-ending = "native"           # Platform-appropriate line endings
-indent-style = "space"           # Explicit space indentation
-preview = true                   # Enable preview formatting features
+quote-style = "double"
+line-ending = "auto"
+indent-style = "space"
