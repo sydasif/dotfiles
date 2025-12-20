@@ -7,19 +7,7 @@
       "Read(./.env)"
     ]
   },
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/bin/bash /home/zulu/.claude/hooks/python_formatter.sh"
-          }
-        ]
-      }
-    ]
-  },
+  "hooks": {},
   "statusLine": {
     "type": "command",
     "command": "/bin/bash /home/zulu/.claude/hooks/statusline.sh"
