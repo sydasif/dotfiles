@@ -23,7 +23,7 @@
     // Font Settings
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
     "editor.fontWeight": "normal",
     // --------------------------------------------------------------------------
     // 3. COLOR CUSTOMIZATIONS
@@ -134,10 +134,9 @@
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.gpuAcceleration": "on",
     // --------------------------------------------------------------------------
     // 10. SOURCE CONTROL (GIT)
     // Git integration and version control settings
@@ -180,7 +179,7 @@
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
-        "markdown": false,
+        "markdown": true,
         "scminput": false,
         "python": true,
         "yaml": true,
@@ -204,4 +203,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "terminal.integrated.copyOnSelection": true,
     "redhat.telemetry.enabled": false,
+    "window.zoomLevel": 0.5,
+    "claudeCode.preferredLocation": "panel",
 }
