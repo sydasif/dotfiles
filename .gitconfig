@@ -9,3 +9,7 @@
     defaultBranch = main
 [diff]
     tool = vimdiff
+[credential]
+	interactive = false
+[url "git@github.com:"]
+	insteadOf = https://github.com/
