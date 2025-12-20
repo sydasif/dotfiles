@@ -14,3 +14,4 @@ todos/
 # local files
 history.jsonl
 stats-cache.json
+config.json

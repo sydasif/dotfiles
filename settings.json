@@ -204,5 +204,6 @@
     "terminal.integrated.copyOnSelection": true,
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": 0.5,
-    "claudeCode.preferredLocation": "panel",
+    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.useCtrlEnterToSend": true,
 }
