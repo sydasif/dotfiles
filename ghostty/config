@@ -99,7 +99,6 @@ mouse-shift-capture = false
 window-decoration = auto
 window-theme = ghostty
 window-colorspace = "display-p3"
-tab-bar-hide-when-single = true
 
 # Bright window title
 window-titlebar-foreground = "#ffffff"
@@ -121,8 +120,6 @@ cursor-opacity = 1.0
 
 # Performance optimizations
 gtk-single-instance = detect
-renderer = auto
-freetype-load-flags = default
 alpha-blending = linear-corrected
 linux-cgroup-memory-limit = 2147483648
 scrollback-limit = 100000000
@@ -146,7 +143,7 @@ keybind = ctrl+shift+i=inspector:toggle
 
 # Shell integration for smart behavior
 shell-integration = detect
-shell-integration-features = cursor,sudo,title,osc133
+shell-integration-features = cursor,sudo,title
 
 # Security settings for safe terminal usage
 clipboard-read = ask
