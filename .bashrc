@@ -116,6 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 
 complete -C /usr/bin/terraform terraform
+
+# Starship prompt
+eval "$(starship init bash)"
