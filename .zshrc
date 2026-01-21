@@ -1,16 +1,7 @@
 # ------------------------------
-# Powerlevel10k Instant Prompt
+# Starship Prompt
 # ------------------------------
-# Loads Powerlevel10k's instant prompt feature very early to speed up shell start.
-# Keep this block near the top of the file.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# ------------------------------
-# Powerlevel10k Config
-# ------------------------------
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Starship is a minimal, fast, and customizable prompt (initialized via Zinit below)
 
 # ------------------------------
 # Zinit Plugin Manager Setup
@@ -31,9 +22,11 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Themes and Plugins via Zinit
 # ------------------------------
 
-# Powerlevel10k theme
-zinit ice depth=1
-zinit light romkatv/powerlevel10k
+# Starship prompt (minimal and fast)
+zinit ice as"command" from"gh-r" \
+  atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+  atpull"%atclone" src"init.zsh"
+zinit light starship/starship
 
 # Syntax highlighting, completions, autosuggestions, and fzf-tab for fuzzy completion
 zinit light zsh-users/zsh-syntax-highlighting
@@ -103,7 +96,7 @@ alias vim="nvim"
 # Make sure you have installed fzf with:
 #   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 #   ~/.fzf/install
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
