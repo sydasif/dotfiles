@@ -65,12 +65,18 @@ window-padding-color = background
 # Modern glassmorphic appearance
 background-opacity = 0.95
 background-blur = 10
+background-opacity-cells = true
 
 # Font configuration for coding
 font-family = "JetBrains Mono"
 font-size = 11
 font-feature = +liga
 font-feature = +calt
+font-family = "Noto Color Emoji"
+font-family = "Noto Sans CJK JP"
+font-family = "Symbols Nerd Font"
+font-shaping-break = cursor
+grapheme-width-method = unicode
 
 # Window behavior for productivity workflow
 maximize = false
@@ -82,11 +88,22 @@ window-new-tab-position = current
 
 # Split management - Subtle dimming to highlight focused split
 unfocused-split-opacity = 0.75
-split-divider-color = "#333333"
+split-divider-color = "#8B4513"
+
+# Enhanced mouse behavior
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 3.0
+mouse-shift-capture = false
 
 # Window decorations - Clean but functional
 window-decoration = auto
-window-theme = auto
+window-theme = ghostty
+window-colorspace = "display-p3"
+tab-bar-hide-when-single = true
+
+# Bright window title
+window-titlebar-foreground = "#ffffff"
+window-titlebar-background = "#0066cc"
 
 # Working directory inheritance for efficient navigation
 window-inherit-working-directory = true
@@ -97,8 +114,22 @@ window-inherit-font-size = false
 title = Terminal
 window-subtitle = working-directory
 
+# Enhanced cursor
+cursor-style = block
+cursor-style-blink = false
+cursor-opacity = 1.0
+
 # Performance optimizations
 gtk-single-instance = detect
+renderer = auto
+freetype-load-flags = default
+alpha-blending = linear-corrected
+linux-cgroup-memory-limit = 2147483648
+scrollback-limit = 100000000
+
+# Linux-specific optimizations
+x11-instance-name = ghostty
+class = com.mitchellh.ghostty
 
 # Custom keybindings for coding workflow (non-defaults only)
 keybind = ctrl+shift+e=new_split:right
@@ -108,10 +139,14 @@ keybind = ctrl+shift+j=goto_split:bottom
 keybind = ctrl+shift+l=goto_split:right
 keybind = ctrl+shift+k=goto_split:top
 keybind = ctrl+shift+z=toggle_split_zoom
+keybind = ctrl+shift+r=new_tab
+keybind = ctrl+shift+f=toggle_fullscreen
+keybind = ctrl+shift+equal=equalize_splits
+keybind = ctrl+shift+i=inspector:toggle
 
 # Shell integration for smart behavior
 shell-integration = detect
-shell-integration-features = cursor,sudo,title
+shell-integration-features = cursor,sudo,title,osc133
 
 # Security settings for safe terminal usage
 clipboard-read = ask
@@ -119,3 +154,12 @@ clipboard-write = allow
 clipboard-paste-protection = true
 copy-on-select = true
 title-report = false
+
+# Enhanced selection behavior
+selection-clear-on-typing = true
+selection-clear-on-copy = false
+minimum-contrast = 3.0
+
+# Link handling
+link-url = true
+link-previews = osc8
