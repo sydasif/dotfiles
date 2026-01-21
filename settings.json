@@ -170,6 +170,7 @@
         "mgmt",
         "netmiko",
         "nornir",
+        "Schafer",
         "vrnetlab"
     ],
     "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -181,7 +182,7 @@
         "plaintext": false,
         "markdown": true,
         "scminput": false,
-        "python": true,
+        "python": false,
         "yaml": true,
         "toml": true
     },
@@ -204,6 +205,22 @@
     "terminal.integrated.copyOnSelection": true,
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": 0.5,
-    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.preferredLocation": "panel",
     "claudeCode.useCtrlEnterToSend": true,
+    "containerlab.showWelcomePage": false,
+    "containerlab.skipCleanupWarning": true,
+    "kilo-code.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show"
+    ],
+    "kilo-code.deniedCommands": [],
+    // JinjaHTML Extension Settings
+    "files.associations": {
+        "*.html": "jinja-html"
+    },
+    "html.format.templating": true,
+    "chat.viewSessions.orientation": "stacked",
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
 }

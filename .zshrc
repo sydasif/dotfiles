@@ -117,4 +117,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export NODE_NO_WARNINGS=1
 
-export ANTHROPIC_BASE_URL=http:127.0.0.1:3455
+
+# opencode
+export PATH=/home/zulu/.opencode/bin:$PATH
