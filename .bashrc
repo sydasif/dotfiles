@@ -122,3 +122,7 @@ complete -C /usr/bin/terraform terraform
 
 # Starship prompt
 eval "$(starship init bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
