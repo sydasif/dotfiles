@@ -223,4 +223,25 @@
     "chat.viewSessions.orientation": "stacked",
     "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
     "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "terminal.integrated.initialHint": false,
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "/usr/bin/zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
 }
