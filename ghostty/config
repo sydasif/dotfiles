@@ -56,11 +56,11 @@
 window-height = 28
 window-width = 130
 
-# Generous padding for readability without wasting space
-window-padding-x = 16
-window-padding-y = 12
+# Asymmetrical padding with color extension for seamless look
+window-padding-x = 5
+window-padding-y = 0,5
 window-padding-balance = true
-window-padding-color = background
+window-padding-color = extend
 
 # Modern glassmorphic appearance
 background-opacity = 0.95
@@ -97,7 +97,7 @@ mouse-shift-capture = false
 
 # Window decorations - Clean but functional
 window-decoration = auto
-window-theme = ghostty
+theme = Nord
 window-colorspace = "display-p3"
 
 # Bright window title
@@ -109,9 +109,14 @@ window-inherit-working-directory = true
 # Keep consistent font size across windows
 window-inherit-font-size = false
 
-# Title and subtitle for context awareness
+# Custom title format with directory tab
 title = Terminal
 window-subtitle = working-directory
+
+# Add this to ~/.bashrc for tab-like directory display:
+# PROMPT_COMMAND='echo -ne "\033]0;[$(basename \"$PWD\")] Terminal\007"'
+
+
 
 # Enhanced cursor
 cursor-style = block
