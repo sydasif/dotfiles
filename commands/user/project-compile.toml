@@ -1,7 +1,0 @@
-name = "project:compile"
-description = "Compile the final spec.md from the brainstorming session"
-prompt = """
-Review our conversation and compile the findings into a comprehensive, developer-ready specification.
-Include architecture choices, data handling, error strategies, and a testing plan.
-Save this as `spec.md`.
-"""

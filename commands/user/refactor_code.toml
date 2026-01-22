@@ -1,9 +1,0 @@
-name = "code:refactor"
-description = "Modernize legacy patterns (Structure focus)"
-prompt = """
-Act as a Python Expert. Refactor the code for modern standards:
-- Replace legacy patterns with modern equivalents (e.g., use f-strings, dataclasses).
-- Break large functions into smaller, single-purpose functions.
-- Apply DRY: Extract duplicate logic into utilities.
-- Ensure behavior remains exactly the same.
-"""

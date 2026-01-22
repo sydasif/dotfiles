@@ -1,9 +1,0 @@
-name = "code:secure"
-description = "Scan and fix security vulnerabilities"
-prompt = """
-Act as a Security Auditor. Fix specific risks:
-- SQL Injection & Command Injection.
-- XSS/CSRF in web handlers.
-- Hardcoded secrets (replace with env vars).
-- Unsafe user input handling.
-"""

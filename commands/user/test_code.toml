@@ -1,8 +1,0 @@
-name = "test:coverage"
-description = "Add missing tests"
-prompt = """
-Act as a QA Engineer.
-1. Identify untested critical paths.
-2. Write unit tests (pytest) for edge cases and core logic.
-3. Refactor existing tests for clarity.
-"""
