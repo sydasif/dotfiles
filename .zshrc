@@ -117,3 +117,11 @@ export PATH=/home/zulu/.opencode/bin:$PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+. "$HOME/.local/share/../bin/env"
+
+export OPENCODE_DISABLE_CLAUDE_CODE=1
+
+# OpenCode Configuration
+export OPENCODE_DISABLE_CLAUDE_CODE=1
+export CONTEXT7_API_KEY="ctx7sk-210275c3-1033-4483-9e92-1c703bb8adc4"
