@@ -1,0 +1,233 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "theme": "One Dark",
+  "restore_on_startup": "last_workspace",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "edit_predictions": {
+    "provider": "zed",
+  },
+  "context_servers": {
+    "mcp-server-context7": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "context7_api_key": "{env:CONTEXT7_API_KEY}",
+      },
+    },
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+  },
+  "debugger": {
+    "button": false,
+  },
+  "search": {
+    "button": true,
+  },
+  "status_bar": {
+    "cursor_position_button": false,
+    "active_language_button": true,
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_sign_in": true,
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": true,
+    "show_branch_icon": false,
+    "show_user_picture": false,
+  },
+  "colorize_brackets": true,
+  "show_whitespaces": "all",
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware",
+  },
+  "ui_font_family": "Ubuntu Mono",
+  "buffer_line_height": "comfortable",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "auto_install_extensions": {
+    "html": true,
+    "toml": true,
+    "xml": true,
+    "log": true,
+    "ini": true,
+    "django": true,
+    "ansible": true,
+    "codebook": true,
+    "terraform": true,
+    "ssh-config": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "docker-compose": true,
+    "material-icon-theme": true,
+    "mcp-server-context7": true,
+    "mcp-server-sequential-thinking": true,
+  },
+  "agent_servers": {
+    "qwen-code": {
+      "type": "registry",
+    },
+    "github-copilot": {
+      "type": "registry",
+    },
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-haiku-4.5",
+    },
+  },
+  "terminal": {
+    "button": false,
+    "font_size": 14.0,
+    "font_family": "MesloLGM Nerd Font Mono",
+    "cursor_shape": "underline",
+    "blinking": "on",
+    "copy_on_select": true,
+    "detect_venv": {
+      "on": {
+        "directories": [".venv", "venv", ".env", "env"],
+        "activate_script": "default",
+      },
+    },
+  },
+  "project_panel": {
+    "sticky_scroll": true,
+    "hide_gitignore": false,
+    "dock": "left",
+    "button": true,
+    "git_status": true,
+    "auto_fold_dirs": false,
+  },
+  "outline_panel": {
+    "git_status": false,
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": false,
+  },
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "gutter": {
+    "folds": true,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "autosave": "on_focus_change",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "file_types": {
+    "jinja-html": ["*.html", "*.html"],
+    "Ansible": [
+      "**.ansible.yml",
+      "**.ansible.yaml",
+      "**/defaults/*.yml",
+      "**/defaults/*.yaml",
+      "**/meta/*.yml",
+      "**/meta/*.yaml",
+      "**/tasks/*.yml",
+      "**/tasks/*.yaml",
+      "**/handlers/*.yml",
+      "**/handlers/*.yaml",
+      "**/group_vars/*.yml",
+      "**/group_vars/*.yaml",
+      "**/host_vars/*.yml",
+      "**/host_vars/*.yaml",
+      "**/playbooks/*.yml",
+      "**/playbooks/*.yaml",
+      "**playbook*.yml",
+      "**playbook*.yaml",
+    ],
+  },
+  "languages": {
+    "Python": {
+      "format_on_save": "on",
+      "formatter": "auto",
+      "language_servers": ["basedpyright", "ruff"],
+    },
+    "YAML": {
+      "format_on_save": "on",
+      "formatter": "language_server",
+    },
+    "Markdown": {
+      "format_on_save": "on",
+    },
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright": {
+          "typeCheckingMode": "standard",
+          "analysis": {
+            "diagnosticMode": "workspace",
+            "inlayHints": {
+              "callArgumentNames": true,
+              "variableTypes": true,
+              "functionReturnTypes": true,
+            },
+            "autoImportCompletions": true,
+          },
+        },
+      },
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 100,
+          "lint": {
+            "extendSelect": [
+              "E",
+              "F",
+              "I",
+              "N",
+              "W",
+              "UP",
+              "B",
+              "C4",
+              "SIM",
+              "PTH",
+            ],
+          },
+        },
+      },
+    },
+    "yaml-language-server": {
+      "settings": {
+        "yaml": {
+          "schemas": {
+            "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
+              "./inventory/*.yaml",
+              "hosts.yml",
+            ],
+          },
+        },
+      },
+    },
+  },
+  "wrap_guides": [100, 110],
+  "base_keymap": "VSCode",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "ui_font_size": 16.9,
+  "buffer_font_size": 14.9,
+}
