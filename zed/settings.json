@@ -7,64 +7,53 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "theme": "One Dark",
-  "restore_on_startup": "last_workspace",
-  "session": {
-    "trust_all_worktrees": true,
+  "agent_servers": {
+    "github-copilot": {
+      "type": "registry"
+    }
   },
   "edit_predictions": {
-    "provider": "zed",
+    "provider": "zed"
   },
-  "context_servers": {
-    "mcp-server-context7": {
-      "enabled": true,
-      "remote": false,
-      "settings": {
-        "context7_api_key": "{env:CONTEXT7_API_KEY}",
-      },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5-mini"
     },
+    "favorite_models": [],
+    "model_parameters": []
   },
+  "theme": "One Dark",
+  "ui_font_size": 16.5,
+  "base_keymap": "VSCode",
+  "buffer_font_size": 14.5,
+  "wrap_guides": [100, 110],
+  "icon_theme": "Material Icon Theme",
   "tab_bar": {
     "show_nav_history_buttons": false,
   },
-  "debugger": {
-    "button": false,
-  },
-  "search": {
-    "button": true,
-  },
-  "status_bar": {
-    "cursor_position_button": false,
-    "active_language_button": true,
-  },
   "title_bar": {
-    "show_menus": false,
-    "show_user_menu": true,
     "show_sign_in": true,
-    "show_onboarding_banner": false,
-    "show_project_items": false,
     "show_branch_name": true,
-    "show_branch_icon": false,
     "show_user_picture": false,
   },
   "colorize_brackets": true,
   "show_whitespaces": "all",
   "indent_guides": {
-    "background_coloring": "disabled",
     "coloring": "indent_aware",
   },
-  "ui_font_family": "Ubuntu Mono",
+  "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_line_height": "comfortable",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
   },
   "auto_install_extensions": {
-    "html": true,
-    "toml": true,
+    "ini": true,
     "xml": true,
     "log": true,
-    "ini": true,
+    "html": true,
+    "toml": true,
     "django": true,
     "ansible": true,
     "codebook": true,
@@ -74,22 +63,6 @@
     "git-firefly": true,
     "docker-compose": true,
     "material-icon-theme": true,
-    "mcp-server-context7": true,
-    "mcp-server-sequential-thinking": true,
-  },
-  "agent_servers": {
-    "qwen-code": {
-      "type": "registry",
-    },
-    "github-copilot": {
-      "type": "registry",
-    },
-  },
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-haiku-4.5",
-    },
   },
   "terminal": {
     "button": false,
@@ -105,26 +78,12 @@
       },
     },
   },
-  "project_panel": {
-    "sticky_scroll": true,
-    "hide_gitignore": false,
-    "dock": "left",
-    "button": true,
-    "git_status": true,
-    "auto_fold_dirs": false,
-  },
-  "outline_panel": {
-    "git_status": false,
-  },
   "tabs": {
     "file_icons": true,
-    "git_status": false,
-  },
-  "sticky_scroll": {
-    "enabled": false,
   },
   "gutter": {
     "folds": true,
+    "min_line_number_digits": 0,
   },
   "minimap": {
     "show": "never",
@@ -134,7 +93,7 @@
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "file_types": {
-    "jinja-html": ["*.html", "*.html"],
+    "jinja-html": ["*.html"],
     "Ansible": [
       "**.ansible.yml",
       "**.ansible.yaml",
@@ -157,16 +116,24 @@
     ],
   },
   "languages": {
-    "Python": {
+    "Ansible": {
+      "tab_size": 2,
       "format_on_save": "on",
+      "formatter": "language_server",
+    },
+    "Python": {
+      "tab_size": 4,
       "formatter": "auto",
+      "format_on_save": "on",
       "language_servers": ["basedpyright", "ruff"],
     },
     "YAML": {
+      "tab_size": 2,
       "format_on_save": "on",
       "formatter": "language_server",
     },
     "Markdown": {
+      "tab_size": 2,
       "format_on_save": "on",
     },
   },
@@ -221,13 +188,4 @@
       },
     },
   },
-  "wrap_guides": [100, 110],
-  "base_keymap": "VSCode",
-  "icon_theme": {
-    "mode": "system",
-    "light": "Material Icon Theme",
-    "dark": "Material Icon Theme",
-  },
-  "ui_font_size": 16.9,
-  "buffer_font_size": 14.9,
 }
