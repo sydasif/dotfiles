@@ -127,8 +127,11 @@ eval "$(starship init bash)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-. "$HOME/.local/share/../bin/env"
 
 # Disable Claude Code compatibility in OpenCode
 export OPENCODE_DISABLE_CLAUDE_CODE=1
 export CONTEXT7_API_KEY="ctx7sk-210275c3-1033-4483-9e92-1c703bb8adc4"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

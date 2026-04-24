@@ -108,7 +108,7 @@
     // Pylance Language Server (for type checking, keep basic to minimize overlaps)
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "standard",
-    "python.defaultInterpreterPath": "/bin/python",
+    "python.defaultInterpreterPath": "/usr/bin/python3",
     // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
     "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
