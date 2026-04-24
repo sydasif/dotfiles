@@ -12,16 +12,12 @@ return {
     },
   },
 
-  -- Smooth scrolling
-  {
-    "karb94/neoscroll.nvim",
-    event = "VeryLazy",
-    config = true, -- Use default settings to avoid mapping errors
-  },
-
   -- Improved file explorer sidebar
   {
     "stevearc/oil.nvim",
+    keys = {
+      { "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+    },
     opts = {},
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" }, -- for file icons
