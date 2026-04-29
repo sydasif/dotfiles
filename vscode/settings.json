@@ -134,7 +134,7 @@
     // Terminal appearance and behavior settings
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
-    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorStyle": "underline",
     "terminal.integrated.cursorBlinking": true,
     // --------------------------------------------------------------------------
@@ -178,13 +178,7 @@
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
     "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false,
-        "python": false,
-        "yaml": true,
-        "toml": true
+        "*": true
     },
     "workbench.activityBar.location": "top",
     "remote.autoForwardPortsSource": "hybrid",
@@ -204,7 +198,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "terminal.integrated.copyOnSelection": true,
     "redhat.telemetry.enabled": false,
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 0.3,
     "claudeCode.preferredLocation": "panel",
     "claudeCode.useCtrlEnterToSend": true,
     "containerlab.showWelcomePage": false,
@@ -243,5 +237,5 @@
             "path": "pwsh",
             "icon": "terminal-powershell"
         }
-    },
+    }
 }

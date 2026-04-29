@@ -1,11 +1,7 @@
 # ------------------------------
-# Starship Prompt
-# ------------------------------
-# Starship is a minimal, fast, and customizable prompt (initialized via Zinit below)
-
-# ------------------------------
 # Zinit Plugin Manager Setup
 # ------------------------------
+
 # Define where Zinit will store itself and its plugins.
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -93,10 +89,10 @@ alias vim="nvim"
 # ------------------------------
 # FZF Keybindings and Autocomplete
 # ------------------------------
+
 # Make sure you have installed fzf with:
 #   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 #   ~/.fzf/install
-
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
@@ -115,12 +111,11 @@ export NODE_NO_WARNINGS=1
 export PATH=/home/zulu/.opencode/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
 
-export OPENCODE_DISABLE_CLAUDE_CODE=1
 
 # OpenCode Configuration
 export OPENCODE_DISABLE_CLAUDE_CODE=1
-export CONTEXT7_API_KEY="ctx7sk-04ece044-8eef-45f6-a334-8233df9f7eab"
