@@ -1,241 +1,229 @@
 {
-    // ==========================================================================
-    // VS CODE CONFIGURATION
-    // High-performance, minimalist development environment (Updated 2025)
-    // ==========================================================================
-    // --------------------------------------------------------------------------
-    // 1. WORKBENCH & INTERFACE LAYOUT
-    // Controls the overall structure and behavior of the VS Code window
-    // --------------------------------------------------------------------------
-    "workbench.startupEditor": "none",
-    "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "One Monokai",
-    "workbench.editor.editorActionsLocation": "titleBar",
-    "workbench.settings.editor": "json",
-    "workbench.reduceMotion": "on",
-    "breadcrumbs.enabled": false,
-    "window.density.editorTabHeight": "compact",
-    "window.menuBarVisibility": "toggle",
-    // --------------------------------------------------------------------------
-    // 2. VISUAL THEME & APPEARANCE
-    // Theme, font, and icon configurations
-    // --------------------------------------------------------------------------
-    // Font Settings
-    "editor.fontFamily": "JetBrains Mono",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 15,
-    "editor.fontWeight": "normal",
-    // --------------------------------------------------------------------------
-    // 3. COLOR CUSTOMIZATIONS
-    // Custom color scheme overrides for enhanced visual experience
-    // --------------------------------------------------------------------------
-    "workbench.colorCustomizations": {
-        // Sidebar & Activity Bar
-        "sideBarSectionHeader.background": "#212153",
-        "sideBarSectionHeader.foreground": "#d1934b",
-        "activityBarBadge.background": "#844905",
-        "tree.indentGuidesStroke": "#e2df1e",
-        // Status & Title Bar
-        "statusBar.background": "#33393d",
-        "titleBar.activeForeground": "#dfdfac",
-        // Terminal
-        "terminal.background": "#30303a",
-        // Tabs
-        "tab.activeBackground": "#5c5c75",
-        "tab.activeForeground": "#e4e4a6",
-        "tab.activeBorderTop": "#ad7d46",
-        "tab.border": "#f40921",
-        "editorGroupHeader.tabsBackground": "#424457",
-        "editorGroupHeader.border": "#7d84ec"
-    },
-    // --------------------------------------------------------------------------
-    // 4. SYNTAX HIGHLIGHTING CUSTOMIZATIONS
-    // Token color overrides for better code readability
-    // --------------------------------------------------------------------------
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "comment",
-                "settings": {
-                    "foreground": "#888181",
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "string.quoted.docstring.multi.python",
-                "settings": {
-                    "foreground": "#92B55F",
-                    "fontStyle": "italic bold"
-                }
-            }
-        ]
-    },
-    // --------------------------------------------------------------------------
-    // 5. EDITOR BEHAVIOR & FEATURES
-    // Core editor functionality and interaction settings
-    // --------------------------------------------------------------------------
-    "editor.minimap.enabled": false,
-    "editor.stickyScroll.enabled": false,
-    "editor.glyphMargin": false,
-    "editor.folding": true,
-    "editor.showFoldingControls": "mouseover",
-    "editor.dragAndDrop": false,
-    // Cursor Settings
-    "editor.cursorStyle": "line",
-    "editor.cursorBlinking": "phase",
-    // Visual Guides
-    "editor.rulers": [
-        88,
-        100
-    ],
-    // --------------------------------------------------------------------------
-    // 6. FILE MANAGEMENT & AUTOMATION
-    // Auto-save, formatting, and file handling configurations
-    // --------------------------------------------------------------------------
-    "files.autoSave": "onFocusChange",
-    "files.trimTrailingWhitespace": true,
-    "files.hotExit": "onExitAndWindowClose",
-    // Explorer Settings
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "explorer.compactFolders": false,
-    // --------------------------------------------------------------------------
-    // 7. 🔥 PYTHON & RUFF CONFIGURATION
-    // Modern Python development with Ruff linting and formatting
-    // --------------------------------------------------------------------------
-    // Python Interpreter and Environment
-    "python.useEnvironmentsExtension": true,
-    // Pylance Language Server (for type checking, keep basic to minimize overlaps)
-    "python.languageServer": "Pylance",
-    "python.analysis.typeCheckingMode": "standard",
-    "python.defaultInterpreterPath": "/usr/bin/python3",
-    // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
-    "ruff.enable": true,
-    "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
-    "ruff.organizeImports": true,
-    "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
-    // Global Formatting
-    "editor.formatOnSave": true,
-    // Python-Specific Settings (scoped actions to prevent extension conflicts)
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": "explicit",
-            "source.organizeImports.ruff": "explicit"
-        },
-        "editor.formatOnSave": true
-    },
-    // Suppress Pylance diagnostics overlaps if needed
-    "python.analysis.ignore": [
-        "*"
-    ],
-    // --------------------------------------------------------------------------
-    // 9. INTEGRATED TERMINAL
-    // Terminal appearance and behavior settings
-    // --------------------------------------------------------------------------
-    "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.cursorStyle": "underline",
-    "terminal.integrated.cursorBlinking": true,
-    // --------------------------------------------------------------------------
-    // 10. SOURCE CONTROL (GIT)
-    // Git integration and version control settings
-    // --------------------------------------------------------------------------
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.decorations.enabled": false,
-    "scm.defaultViewMode": "tree",
-    // --------------------------------------------------------------------------
-    // 11. EXTENSION CONFIGURATIONS
-    // Settings for installed extensions
-    // --------------------------------------------------------------------------
-    // Indent Rainbow Extension
-    "indentRainbow.indicatorStyle": "light",
-    "indentRainbow.lightIndicatorStyleLineWidth": 1,
-    "indentRainbow.colors": [
-        "rgba(255,255,64,0.3)",
-        "rgba(127,255,127,0.3)",
-        "rgba(255,127,255,0.3)",
-        "rgba(79,236,236,0.3)"
-    ],
-    "indentRainbow.errorColor": "rgba(102, 44, 44, 0.6)",
-    "extensions.autoUpdate": false,
-    "extensions.autoCheckUpdates": false,
-    "cSpell.userWords": [
-        "ceos",
-        "checkpointer",
-        "clab",
-        "Containerlab",
-        "groq",
-        "mgmt",
-        "netmiko",
-        "nornir",
-        "Schafer",
-        "vrnetlab"
-    ],
-    "terminal.integrated.enableMultiLinePasteWarning": "never",
-    "workbench.editor.empty.hint": "hidden",
-    "extensions.ignoreRecommendations": true,
-    "security.workspace.trust.untrustedFiles": "open",
-    "github.copilot.enable": {
-        "*": true
-    },
-    "workbench.activityBar.location": "top",
-    "remote.autoForwardPortsSource": "hybrid",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontLigatures.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "diffEditor.maxComputationTime": 0,
-    "terminal.integrated.stickyScroll.enabled": false,
-    "github.copilot.nextEditSuggestions.enabled": false,
-    "chat.mcp.gallery.enabled": true,
-    "chat.mcp.autostart": "onlyNew",
-    "python.terminal.useEnvFile": true,
-    "editor.unicodeHighlight.allowedLocales": {
-        "cs": true
-    },
-    "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.copyOnSelection": true,
-    "redhat.telemetry.enabled": false,
-    "window.zoomLevel": 0.3,
-    "claudeCode.preferredLocation": "panel",
-    "claudeCode.useCtrlEnterToSend": true,
-    "containerlab.showWelcomePage": false,
-    "containerlab.skipCleanupWarning": true,
-    "kilo-code.allowedCommands": [
-        "git log",
-        "git diff",
-        "git show"
-    ],
-    "kilo-code.deniedCommands": [],
-    // JinjaHTML Extension Settings
-    "files.associations": {
-        "*.html": "jinja-html"
-    },
-    "html.format.templating": true,
-    "chat.viewSessions.orientation": "stacked",
-    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
-    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
-    "terminal.integrated.initialHint": false,
-    "terminal.integrated.profiles.linux": {
-        "bash": {
-            "path": "bash",
-            "icon": "terminal-bash"
-        },
-        "zsh": {
-            "path": "/usr/bin/zsh"
-        },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
-        "pwsh": {
-            "path": "pwsh",
-            "icon": "terminal-powershell"
+  // ==========================================================================
+  // VS CODE CONFIGURATION
+  // High-performance, minimalist development environment (Updated 2025)
+  // ==========================================================================
+  // --------------------------------------------------------------------------
+  // 1. WORKBENCH & INTERFACE LAYOUT
+  // Controls the overall structure and behavior of the VS Code window
+  // --------------------------------------------------------------------------
+  "workbench.startupEditor": "none",
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "One Monokai",
+  "workbench.editor.editorActionsLocation": "titleBar",
+  "workbench.settings.editor": "json",
+  "workbench.reduceMotion": "on",
+  "breadcrumbs.enabled": false,
+  "window.density.editorTabHeight": "compact",
+  "window.menuBarVisibility": "toggle",
+  // --------------------------------------------------------------------------
+  // 2. VISUAL THEME & APPEARANCE
+  // Theme, font, and icon configurations
+  // --------------------------------------------------------------------------
+  // Font Settings
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.fontWeight": "normal",
+  // --------------------------------------------------------------------------
+  // 3. COLOR CUSTOMIZATIONS
+  // Custom color scheme overrides for enhanced visual experience
+  // --------------------------------------------------------------------------
+  "workbench.colorCustomizations": {
+    // Sidebar & Activity Bar
+    "sideBarSectionHeader.background": "#212153",
+    "sideBarSectionHeader.foreground": "#d1934b",
+    "activityBarBadge.background": "#844905",
+    "tree.indentGuidesStroke": "#e2df1e",
+    // Status & Title Bar
+    "statusBar.background": "#33393d",
+    "titleBar.activeForeground": "#dfdfac",
+    // Terminal
+    "terminal.background": "#30303a",
+    // Tabs
+    "tab.activeBackground": "#5c5c75",
+    "tab.activeForeground": "#e4e4a6",
+    "tab.activeBorderTop": "#ad7d46",
+    "tab.border": "#f40921",
+    "editorGroupHeader.tabsBackground": "#424457",
+    "editorGroupHeader.border": "#7d84ec"
+  },
+  // --------------------------------------------------------------------------
+  // 4. SYNTAX HIGHLIGHTING CUSTOMIZATIONS
+  // Token color overrides for better code readability
+  // --------------------------------------------------------------------------
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#888181",
+          "fontStyle": "italic"
         }
+      },
+      {
+        "scope": "string.quoted.docstring.multi.python",
+        "settings": {
+          "foreground": "#92B55F",
+          "fontStyle": "italic bold"
+        }
+      }
+    ]
+  },
+  // --------------------------------------------------------------------------
+  // 5. EDITOR BEHAVIOR & FEATURES
+  // Core editor functionality and interaction settings
+  // --------------------------------------------------------------------------
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.folding": true,
+  "editor.showFoldingControls": "mouseover",
+  "editor.dragAndDrop": false,
+  // Cursor Settings
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "phase",
+  // Visual Guides
+  "editor.rulers": [88, 100],
+  // --------------------------------------------------------------------------
+  // 6. FILE MANAGEMENT & AUTOMATION
+  // Auto-save, formatting, and file handling configurations
+  // --------------------------------------------------------------------------
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.hotExit": "onExitAndWindowClose",
+  // Explorer Settings
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  // --------------------------------------------------------------------------
+  // 7. 🔥 PYTHON & RUFF CONFIGURATION
+  // Modern Python development with Ruff linting and formatting
+  // --------------------------------------------------------------------------
+  // Python Interpreter and Environment
+  "python.useEnvironmentsExtension": true,
+  // Pylance Language Server (for type checking, keep basic to minimize overlaps)
+  "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "standard",
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  // 🔥 UPDATED: Ruff Integration (use native Rust server for performance)
+  "ruff.enable": true,
+  "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
+  "ruff.organizeImports": true,
+  "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
+  // Python-Specific Settings (scoped actions to prevent extension conflicts)
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.formatOnSave": true
+  },
+  // --------------------------------------------------------------------------
+  // 9. INTEGRATED TERMINAL
+  // Terminal appearance and behavior settings
+  // --------------------------------------------------------------------------
+  "terminal.integrated.fontFamily": "MesloLGM Nerd Font Mono",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.cursorBlinking": true,
+  // --------------------------------------------------------------------------
+  // 10. SOURCE CONTROL (GIT)
+  // Git integration and version control settings
+  // --------------------------------------------------------------------------
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.decorations.enabled": false,
+  "scm.defaultViewMode": "tree",
+  // --------------------------------------------------------------------------
+  // 11. EXTENSION CONFIGURATIONS
+  // Settings for installed extensions
+  // --------------------------------------------------------------------------
+  // Indent Rainbow Extension
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"
+  ],
+  "indentRainbow.errorColor": "rgba(102, 44, 44, 0.6)",
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "cSpell.userWords": [
+    "ceos",
+    "checkpointer",
+    "clab",
+    "Containerlab",
+    "groq",
+    "mgmt",
+    "netmiko",
+    "nornir",
+    "Schafer",
+    "vrnetlab"
+  ],
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "workbench.editor.empty.hint": "hidden",
+  "extensions.ignoreRecommendations": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "github.copilot.enable": {
+    "*": true
+  },
+  "workbench.activityBar.location": "top",
+  "remote.autoForwardPortsSource": "hybrid",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "diffEditor.maxComputationTime": 0,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "chat.mcp.gallery.enabled": true,
+  "chat.mcp.autostart": "onlyNew",
+  "python.terminal.useEnvFile": true,
+  "editor.unicodeHighlight.allowedLocales": {
+    "cs": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.copyOnSelection": true,
+  "redhat.telemetry.enabled": false,
+  "window.zoomLevel": 0.3,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.useCtrlEnterToSend": true,
+  "containerlab.showWelcomePage": false,
+  "containerlab.skipCleanupWarning": true,
+  "kilo-code.allowedCommands": ["git log", "git diff", "git show"],
+  "kilo-code.deniedCommands": [],
+  // JinjaHTML Extension Settings - scoped to specific paths only
+  "files.associations": {
+    "**/templates/*.html": "jinja-html",
+    "**/views/*.html": "jinja-html"
+  },
+  "html.format.templating": true,
+  "chat.viewSessions.orientation": "stacked",
+  "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+  "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/usr/bin/zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
     }
+  }
 }

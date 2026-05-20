@@ -6,18 +6,22 @@
 # Core settings
 output-format = "grouped"
 line-length = 88
+target-version = "py310"
 
 [lint]
-# Select only essential rule sets
+# Select rule sets - aligned with Zed config
 select = [
-    "E",  # pycodestyle errors (basic style)
-    "W",  # pycodestyle warnings
-    "F",  # pyflakes (runtime errors)
-    "B",  # bugbear (common bugs)
-    "I",  # isort (import ordering)
-    "N",  # naming conventions
-    "UP", # pyupgrade (modern syntax)
-    "S",  # security (bandit subset)
+    "E",   # pycodestyle errors (basic style)
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes (runtime errors)
+    "B",   # bugbear (common bugs)
+    "I",   # isort (import ordering)
+    "N",   # naming conventions
+    "UP",  # pyupgrade (modern syntax)
+    "S",   # security (bandit subset)
+    "C4",  # comprehensions
+    "SIM", # simplify
+    "PTH", # pathlib
 ]
 
 # Minimal ignores for practical development

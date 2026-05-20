@@ -8,7 +8,7 @@ return {
 
   {
     "nvim-lualine/lualine.nvim",
-    lazy = false,
+    event = "VimEnter",
     opts = {
       options = { theme = "auto" },
     },

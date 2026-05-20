@@ -53,7 +53,6 @@ bindkey '^[w' kill-region
 HISTSIZE=5000                  # Max number of lines kept in memory
 HISTFILE=~/.zsh_history        # File where history is stored
 SAVEHIST=$HISTSIZE
-HISTDUP=erase
 setopt appendhistory           # Append to history file instead of overwriting
 setopt sharehistory            # Share history between sessions
 setopt hist_ignore_space       # Ignore commands starting with a space
@@ -95,27 +94,15 @@ alias vim="nvim"
 #   ~/.fzf/install
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/terraform terraform
 export PATH=$PATH:~/packer/
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export NODE_NO_WARNINGS=1
-
 
 # opencode
-export PATH=/home/zulu/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-
-
-
-# OpenCode Configuration
-export OPENCODE_DISABLE_CLAUDE_CODE=1

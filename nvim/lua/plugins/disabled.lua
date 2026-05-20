@@ -3,6 +3,6 @@ return {
   { "akinsho/bufferline.nvim", enabled = false },
   { "folke/noice.nvim", enabled = false },
   { "folke/tokyonight.nvim", enabled = false },
-  { "echasnovski/mini.icons", enabled = false },
+  { "nvim-mini/mini.icons", enabled = true },
   { "windwp/nvim-ts-autotag", enabled = false },
 }

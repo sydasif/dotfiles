@@ -3,7 +3,7 @@ return {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        python = { "black" },
+        python = { "ruff" },
         yaml = { "yamlfmt" },
         jinja = { "djlint" },
       },

@@ -63,3 +63,14 @@ hs_err_pid*
 # Node
 npm-debug.log
 yarn-error.log
+
+# Security sensitive
+.env
+.env.*
+*.pem
+*.key
+*.secret
+*credentials*
+
+# Ruff cache
+.ruff_cache/

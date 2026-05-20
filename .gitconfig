@@ -2,7 +2,7 @@
     name = Syed Asif
     email = sydasif78@gmail.com
 [core]
-    editor = vim
+    editor = nvim
     autocrlf = input
     excludesfile = ~/.gitignore
 [init]
