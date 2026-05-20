@@ -5,7 +5,7 @@
 
 # Core settings
 output-format = "grouped"
-line-length = 88
+line-length = 100
 target-version = "py310"
 
 [lint]

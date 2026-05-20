@@ -1,83 +1,48 @@
 // Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
+
 {
-  "context_servers": {
-    "WebSearch": {
-      "enabled": true,
-      "remote": false,
-      "command": "web-search-mcp",
-      "args": [],
-      "env": {},
-    },
-  },
-  "agent": {
-    "tool_permissions": {
-      "tools": {
-        "mcp:WebSearch:search_web": {
-          "default": "allow",
-        },
-        "terminal": {
-          "always_allow": [
-            {
-              "pattern": "^git\\s+status(\\s|$)",
-            },
-            {
-              "pattern": "^git\\s+diff(\\s|$)",
-            },
-          ],
-        },
-      },
-    },
-    "default_model": {
-      "provider": "LiteLLM",
-      "model": "gemma-4-31b-it",
-    },
-    "favorite_models": [
-      {
-        "provider": "LiteLLM",
-        "model": "gemma-4-31b-it",
-      },
-    ],
-  },
+  "diff_view_style": "split",
+  "cli_default_open_behavior": "new_window",
+  "agent_buffer_font_size": 17.0,
   "language_models": {
+    "opencode": {
+      "show_go_models": false,
+      "show_zen_models": false
+    },
     "openai_compatible": {
-      "LiteLLM": {
-        "api_url": "http://localhost:4000/v1",
+      "Bifrost": {
+        "api_url": "http://localhost:8080/v1",
         "available_models": [
           {
-            "name": "gemma-4-31b-it",
-            "max_tokens": 262144,
-            "max_output_tokens": 32768,
-            "max_completion_tokens": 262144,
+            "name": "gemini/gemma-4-31b-it",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
               "chat_completions": true,
-            },
+              "interleaved_reasoning": false
+            }
           },
           {
-            "name": "gemma-4-26b-a4b-it",
-            "max_tokens": 262144,
-            "max_output_tokens": 32768,
-            "max_completion_tokens": 262144,
+            "name": "gemini/gemma-4-26b-a4b-it",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
             "capabilities": {
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
               "chat_completions": true,
-            },
+              "interleaved_reasoning": false
+            }
           },
           {
-            "name": "gemini-3.1-flash-lite-preview",
+            "name": "mistral/mistral-small-2603",
             "max_tokens": 200000,
             "max_output_tokens": 32000,
             "max_completion_tokens": 200000,
@@ -87,36 +52,136 @@
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
               "chat_completions": true,
-            },
+              "interleaved_reasoning": false
+            }
           },
-        ],
-      },
-    },
+          {
+            "name": "mistral/mistral-medium-3-5",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false
+            }
+          },
+          {
+            "name": "mistral/mistral-large-2512",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false
+            }
+          },
+          {
+            "name": "mistral/devstral-2512",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false
+            }
+          },
+          {
+            "name": "mistral/ministral-14b-2512",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false
+            }
+          }
+        ]
+      }
+    }
   },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "Bifrost",
+      "model": "mistral/devstral-2512",
+      "enable_thinking": false
+    },
+    "dock": "right"
+  },
+  "agent_ui_font_size": 17.0,
+
+  "sticky_scroll": {
+    "enabled": false
+  },
+
+  "context_servers": {
+    "WebSearch": {
+      "enabled": true,
+      "remote": false,
+      "command": "web-search-mcp",
+      "args": [],
+      "env": {}
+    }
+  },
+
   "theme": "One Dark",
-  "ui_font_size": 16.5,
+  "ui_font_size": 18.0,
   "base_keymap": "VSCode",
-  "buffer_font_size": 14.5,
+  "buffer_font_size": 17,
   "wrap_guides": [100, 110],
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+
   "tab_bar": {
-    "show_nav_history_buttons": false,
+    "show": true
   },
   "title_bar": {
-    "show_sign_in": true,
-    "show_branch_name": true,
-    "show_user_picture": false,
+    "button_layout": "standard",
+    "show_menus": false,
+    "show_user_menu": true,
+    "show_branch_name": false,
+    "show_user_picture": false
   },
+
   "colorize_brackets": true,
-  "show_whitespaces": "all",
+  "show_whitespaces": "none",
   "indent_guides": {
-    "coloring": "indent_aware",
+    "coloring": "indent_aware"
   },
-  "ui_font_family": "JetBrainsMono Nerd Font",
-  "buffer_line_height": "comfortable",
+  "ui_font_family": "Arial",
+  "buffer_line_height": "standard",
   "telemetry": {
     "diagnostics": false,
-    "metrics": false,
+    "metrics": false
   },
   "auto_install_extensions": {
     "ini": true,
@@ -131,12 +196,11 @@
     "ssh-config": true,
     "dockerfile": true,
     "git-firefly": true,
-    "docker-compose": true,
-    "material-icon-theme": true,
+    "docker-compose": true
   },
   "terminal": {
     "button": false,
-    "font_size": 14.0,
+    "font_size": 16,
     "font_family": "MesloLGM Nerd Font Mono",
     "cursor_shape": "underline",
     "blinking": "on",
@@ -144,26 +208,33 @@
     "detect_venv": {
       "on": {
         "directories": [".venv", "venv", ".env", "env"],
-        "activate_script": "default",
-      },
-    },
+        "activate_script": "default"
+      }
+    }
   },
   "tabs": {
-    "file_icons": true,
+    "show_close_button": "hover",
+    "close_position": "right",
+    "git_status": false
   },
   "gutter": {
     "folds": true,
-    "min_line_number_digits": 0,
+    "min_line_number_digits": 0
   },
   "minimap": {
-    "show": "never",
+    "show": "never"
   },
-  "cursor_shape": "bar",
+  "cursor_shape": "underline",
   "cursor_blink": true,
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "file_types": {
-    "jinja-html": ["*.html"],
+    "jinja-html": [
+      "**/templates/*.html",
+      "**/views/*.html",
+      "**/*.j2",
+      "**/*.jinja"
+    ],
     "Ansible": [
       "**.ansible.yml",
       "**.ansible.yaml",
@@ -182,30 +253,30 @@
       "**/playbooks/*.yml",
       "**/playbooks/*.yaml",
       "**playbook*.yml",
-      "**playbook*.yaml",
-    ],
+      "**playbook*.yaml"
+    ]
   },
   "languages": {
     "Ansible": {
       "tab_size": 2,
       "format_on_save": "on",
-      "formatter": "language_server",
+      "formatter": "language_server"
     },
     "Python": {
       "tab_size": 4,
       "formatter": "auto",
       "format_on_save": "on",
-      "language_servers": ["basedpyright", "ruff"],
+      "language_servers": ["basedpyright", "ruff"]
     },
     "YAML": {
       "tab_size": 2,
       "format_on_save": "on",
-      "formatter": "language_server",
+      "formatter": "language_server"
     },
     "Markdown": {
       "tab_size": 2,
-      "format_on_save": "on",
-    },
+      "format_on_save": "on"
+    }
   },
   "lsp": {
     "basedpyright": {
@@ -215,14 +286,14 @@
           "analysis": {
             "diagnosticMode": "workspace",
             "inlayHints": {
-              "callArgumentNames": true,
-              "variableTypes": true,
-              "functionReturnTypes": true,
+              "callArgumentNames": false,
+              "variableTypes": false,
+              "functionReturnTypes": false
             },
-            "autoImportCompletions": true,
-          },
-        },
-      },
+            "autoImportCompletions": true
+          }
+        }
+      }
     },
     "ruff": {
       "initialization_options": {
@@ -239,11 +310,11 @@
               "B",
               "C4",
               "SIM",
-              "PTH",
-            ],
-          },
-        },
-      },
+              "PTH"
+            ]
+          }
+        }
+      }
     },
     "yaml-language-server": {
       "settings": {
@@ -251,11 +322,11 @@
           "schemas": {
             "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
               "./inventory/*.yaml",
-              "hosts.yml",
-            ],
-          },
-        },
-      },
-    },
-  },
+              "hosts.yml"
+            ]
+          }
+        }
+      }
+    }
+  }
 }
