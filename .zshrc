@@ -102,6 +102,24 @@ eval "$(uvx --generate-shell-completion zsh)"
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
 
+# Load secrets from ~/.claude/.env
+if [ -f "$HOME/.claude/.env" ]; then
+  while IFS='=' read -r key value; do
+    case "$key" in ''|\#*) continue ;; esac
+    export "$key"="$value"
+  done < "$HOME/.claude/.env"
+  unset key value
+fi
+
+# Load opencode secrets from ~/.config/opencode/.env
+if [ -f "$HOME/.config/opencode/.env" ]; then
+  while IFS='=' read -r key value; do
+    case "$key" in ''|\#*) continue ;; esac
+    export "$key"="$value"
+  done < "$HOME/.config/opencode/.env"
+  unset key value
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set up fzf key bindings and fuzzy completion

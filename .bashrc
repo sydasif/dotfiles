@@ -123,3 +123,14 @@ eval "$(starship init bash)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Load opencode secrets (token, etc.) from ~/.claude/.env
+if [ -f "$HOME/.claude/.env" ]; then
+  while IFS='=' read -r key value; do
+    case "$key" in ''|\#*) continue ;; esac
+    export "$key"="$value"
+  done < "$HOME/.claude/.env"
+  unset key value
+fi
