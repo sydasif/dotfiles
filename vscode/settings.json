@@ -98,15 +98,12 @@
     // Explorer Settings
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "explorer.compactFolders": false,
     // --------------------------------------------------------------------------
     // 7. PYTHON & RUFF CONFIGURATION
     // Modern Python development with Ruff linting and formatting
     // --------------------------------------------------------------------------
     // Python Interpreter and Environment
-    "python.useEnvironmentsExtension": true,
-    // Pylance Language Server (for type checking, keep basic to minimize overlaps)
-    "python.languageServer": "Pylance",
+    // Pylance is the default language server
     "python.analysis.typeCheckingMode": "standard",
     "python.defaultInterpreterPath": "/usr/bin/python3",
     // Ruff Integration (use native Rust server for performance)
@@ -167,10 +164,12 @@
         "clab",
         "Containerlab",
         "groq",
+        "litellm",
         "mgmt",
         "netmiko",
         "nornir",
         "Schafer",
+        "Syed",
         "vrnetlab"
     ],
     "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -178,7 +177,7 @@
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": true,
         "scminput": false,
@@ -241,5 +240,18 @@
     "settingsSync.ignoredSettings": [
         "-python.defaultInterpreterPath"
     ],
+    "hediet.vscode-drawio.resizeImages": null,
     "chat.viewSessions.orientation": "stacked",
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.commandsToSkipShell": [
+        "kilo-code.new.agentManagerOpen",
+        "kilo-code.new.agentManager.showTerminal"
+    ],
+    "kilo-code.new.agentWorkStyle": "human-in-the-loop",
+    "kilo-code.new.showTaskTimeline": true,
+    "kilo-code.new.claudeCodeCompat": true,
+    "kilo-code.new.fontSize": 14,
+    "kilo-code.new.languageCommitMessage": "en",
+    "kilo-code.new.autoApprove.enabled": false,
+    "kilo-code.new.autocomplete.enableAutoTrigger": false,
 }
