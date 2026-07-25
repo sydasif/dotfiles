@@ -98,7 +98,6 @@ export PATH=$PATH:~/packer/
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
-
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
 
@@ -124,3 +123,6 @@ fi
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Set up .profile
+source ~/.profile
