@@ -119,8 +119,6 @@ if [ -f "$HOME/.config/opencode/.env" ]; then
   unset key value
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
