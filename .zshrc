@@ -125,3 +125,4 @@ fi
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+export PATH="$HOME/.local/bin:$PATH"
