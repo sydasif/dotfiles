@@ -104,7 +104,7 @@
     // --------------------------------------------------------------------------
     // Python Interpreter and Environment
     // Pylance is the default language server
-    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.typeCheckingMode": "strict",
     "python.defaultInterpreterPath": "/usr/bin/python3",
     // Ruff Integration (use native Rust server for performance)
     "ruff.enable": true,
@@ -193,7 +193,7 @@
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "diffEditor.maxComputationTime": 0,
     "terminal.integrated.stickyScroll.enabled": false,
-    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.nextEditSuggestions.enabled": false,
     "chat.mcp.gallery.enabled": true,
     "chat.mcp.autostart": "onlyNew",
     "python.terminal.useEnvFile": true,
@@ -240,18 +240,12 @@
     "settingsSync.ignoredSettings": [
         "-python.defaultInterpreterPath"
     ],
-    "hediet.vscode-drawio.resizeImages": null,
     "chat.viewSessions.orientation": "stacked",
     "git.openRepositoryInParentFolders": "never",
     "terminal.integrated.commandsToSkipShell": [
         "kilo-code.new.agentManagerOpen",
         "kilo-code.new.agentManager.showTerminal"
     ],
-    "kilo-code.new.agentWorkStyle": "human-in-the-loop",
-    "kilo-code.new.showTaskTimeline": true,
-    "kilo-code.new.claudeCodeCompat": true,
-    "kilo-code.new.fontSize": 14,
-    "kilo-code.new.languageCommitMessage": "en",
-    "kilo-code.new.autoApprove.enabled": false,
-    "kilo-code.new.autocomplete.enableAutoTrigger": false,
+    "python.useEnvironmentsExtension": true,
+    "python.analysis.diagnosticSeverityOverrides": {},
 }
