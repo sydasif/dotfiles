@@ -74,3 +74,6 @@ yarn-error.log
 
 # Ruff cache
 .ruff_cache/
+
+# Claude Code
+**/.claude/settings.local.json
