@@ -1,0 +1,38 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+Desktop.ini
+Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+._*
+
+# Vim swap files
+*.swp
+*.swo
+
+# JetBrains / IDEA
+*.iml
+.idea/
+
+# VS Code
+.vscode/
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# Node
+npm-debug.log
+yarn-error.log
+
+# Security sensitive (machine-local)
+.env
+.env.*
+*.pem
+*.key
+*.secret
+*credentials*
+
+# Claude Code
+**/.claude/settings.local.json
