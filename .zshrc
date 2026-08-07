@@ -94,33 +94,34 @@ alias vim="nvim"
 #   ~/.fzf/install
 
 autoload -U +X bashcompinit && bashcompinit
-export PATH=$PATH:~/packer/
+export PATH="$PATH:$HOME/packer/"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
 # opencode
-export PATH=$HOME/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# Dedup PATH in zsh
+typeset -U path
+path=($HOME/.opencode/bin $path)
 
 # Load secrets from ~/.claude/.env
 if [ -f "$HOME/.claude/.env" ]; then
-  while IFS='=' read -r key value; do
-    case "$key" in ''|\#*) continue ;; esac
-    export "$key"="$value"
+  while IFS= read -r line; do
+    case "$line" in ''|\#*) continue ;; esac
+    case "$line" in *=*) ;; *) continue ;; esac
+    export "$line"
   done < "$HOME/.claude/.env"
-  unset key value
 fi
 
 # Load opencode secrets from ~/.config/opencode/.env
 if [ -f "$HOME/.config/opencode/.env" ]; then
-  while IFS='=' read -r key value; do
-    case "$key" in ''|\#*) continue ;; esac
-    export "$key"="$value"
+  while IFS= read -r line; do
+    case "$line" in ''|\#*) continue ;; esac
+    case "$line" in *=*) ;; *) continue ;; esac
+    export "$line"
   done < "$HOME/.config/opencode/.env"
-  unset key value
 fi
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
-
-# Set up .profile
-source ~/.profile
