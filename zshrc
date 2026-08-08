@@ -101,28 +101,9 @@ eval "$(uvx --generate-shell-completion zsh)"
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
-# Dedup PATH in zsh
-typeset -U path
-path=($HOME/.opencode/bin $path)
-
-# Load secrets from ~/.claude/.env
-if [ -f "$HOME/.claude/.env" ]; then
-  while IFS= read -r line; do
-    case "$line" in ''|\#*) continue ;; esac
-    case "$line" in *=*) ;; *) continue ;; esac
-    export "$line"
-  done < "$HOME/.claude/.env"
-fi
-
-# Load opencode secrets from ~/.config/opencode/.env
-if [ -f "$HOME/.config/opencode/.env" ]; then
-  while IFS= read -r line; do
-    case "$line" in ''|\#*) continue ;; esac
-    case "$line" in *=*) ;; *) continue ;; esac
-    export "$line"
-  done < "$HOME/.config/opencode/.env"
-fi
-
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
 export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(register-python-argcomplete pipx)"
