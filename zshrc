@@ -107,3 +107,6 @@ source <(fzf --zsh)
 export PATH="$HOME/.local/bin:$PATH"
 
 eval "$(register-python-argcomplete pipx)"
+
+# Created by `pipx` on 2026-08-09 07:57:32
+export PATH="$PATH:/home/zulu/.local/bin"
