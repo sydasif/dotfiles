@@ -95,18 +95,26 @@ alias vim="nvim"
 
 autoload -U +X bashcompinit && bashcompinit
 export PATH="$PATH:$HOME/packer/"
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+
+# pipx-managed CLIs (uv, uvx, pipx, ruff, netlab) — must be on PATH before
+# the uv/uvx completion hooks below
+export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+if command -v uv >/dev/null 2>&1; then
+  eval "$(uv generate-shell-completion zsh)"
+  eval "$(uvx --generate-shell-completion zsh)"
+fi
 
-export PATH="$HOME/.local/bin:$PATH"
+# fzf key bindings and fuzzy completion. `fzf --zsh` needs fzf >= 0.48;
+# older Ubuntu builds fall back to the bundled scripts.
+if fzf --zsh >/dev/null 2>&1; then
+  source <(fzf --zsh)
+elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
+  source /usr/share/doc/fzf/examples/completion.zsh
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
 
 eval "$(register-python-argcomplete pipx)"
-
-# Created by `pipx` on 2026-08-09 07:57:32
-export PATH="$PATH:/home/zulu/.local/bin"

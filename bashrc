@@ -119,8 +119,14 @@ fi
 # Starship prompt
 eval "$(starship init bash)"
 
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
+# Set up fzf key bindings and fuzzy completion. `fzf --bash` needs fzf >= 0.48;
+# older Ubuntu builds fall back to the bundled scripts.
+if fzf --bash >/dev/null 2>&1; then
+  eval "$(fzf --bash)"
+elif [ -f /usr/share/doc/fzf/examples/key-bindings.bash ]; then
+  . /usr/share/doc/fzf/examples/completion.bash
+  . /usr/share/doc/fzf/examples/key-bindings.bash
+fi
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
