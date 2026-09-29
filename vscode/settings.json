@@ -10,7 +10,7 @@
     "workbench.sideBar.location": "right",
     "workbench.colorTheme": "One Monokai",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.editor.editorActionsLocation": "hidden",
     "workbench.editor.empty.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.settings.applyToAllProfiles": [
@@ -19,7 +19,6 @@
     "workbench.reduceMotion": "on",
     "workbench.activityBar.location": "top",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
-    "workbench.navigationControl.enabled": false,
     "workbench.browser.showInTitleBar": false,
     "window.density.editorTabHeight": "compact",
     "window.zoomLevel": 1,
@@ -95,6 +94,10 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.maxComputationTime": 0,
+    "editor.linkedEditing": true,
+    "editor.detectIndentation": false,
+    "html.format.templating": true,
+    "html.format.indentHandlebars": false,
     // --------------------------------------------------------------------------
     // 6. FILE MANAGEMENT & AUTOMATION
     // --------------------------------------------------------------------------
@@ -102,13 +105,40 @@
     "files.trimTrailingWhitespace": true,
     "files.hotExit": "onExitAndWindowClose",
     "files.associations": {
-        "*.html": "jinja-html"
+        "**/templates/*.html": "jinja-html",
+        "**/templates/**/*.html": "jinja-html"
     },
-    "html.format.templating": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     // --------------------------------------------------------------------------
-    // 7. PYTHON & RUFF CONFIGURATION
+    // 7. LANGUAGE-SPECIFIC INDENTATION & FORMATTING
+    // --------------------------------------------------------------------------
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[yaml]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    "[jinja-html]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": false
+    },
+    // --------------------------------------------------------------------------
+    // 8. PYTHON & RUFF CONFIGURATION
     // --------------------------------------------------------------------------
     "python.analysis.typeCheckingMode": "standard",
     "python.defaultInterpreterPath": "/usr/bin/python3",
@@ -125,17 +155,8 @@
     "ruff.nativeServer": "on", // Enable Rust-based server (recommended for speed)
     "ruff.organizeImports": true,
     "ruff.importStrategy": "useBundled", // Use bundled Ruff for consistency
-    "editor.formatOnSave": true,
-    "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.codeActionsOnSave": {
-            "source.fixAll.ruff": "explicit",
-            "source.organizeImports.ruff": "explicit"
-        },
-        "editor.formatOnSave": true
-    },
     // --------------------------------------------------------------------------
-    // 8. INTEGRATED TERMINAL
+    // 9. INTEGRATED TERMINAL
     // --------------------------------------------------------------------------
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
     "terminal.integrated.fontSize": 14,
@@ -155,20 +176,13 @@
         "zsh": {
             "path": "/usr/bin/zsh"
         },
-        "fish": {
-            "path": "fish"
-        },
-        "tmux": {
-            "path": "tmux",
-            "icon": "terminal-tmux"
-        },
         "pwsh": {
             "path": "pwsh",
             "icon": "terminal-powershell"
         }
     },
     // --------------------------------------------------------------------------
-    // 9. SOURCE CONTROL (GIT)
+    // 10. SOURCE CONTROL (GIT)
     // --------------------------------------------------------------------------
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -176,20 +190,18 @@
     "git.openRepositoryInParentFolders": "never",
     "scm.defaultViewMode": "tree",
     // --------------------------------------------------------------------------
-    // 10. EXTENSIONS — GENERAL
+    // 11. EXTENSIONS — GENERAL
     // --------------------------------------------------------------------------
     "extensions.autoUpdate": "off",
     "extensions.autoCheckUpdates": false,
     "extensions.ignoreRecommendations": true,
     "security.workspace.trust.untrustedFiles": "open",
     // --------------------------------------------------------------------------
-    // 11. AI / COPILOT & CHAT
+    // 12. AI / COPILOT & CHAT
     // --------------------------------------------------------------------------
     "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
+        "*": false,
         "markdown": true,
-        "scminput": false,
         "yaml": true,
         "toml": true,
         "python": true
@@ -200,16 +212,18 @@
     "chat.viewSessions.orientation": "stacked",
     "chat.titleBar.openInAgentsWindow.enabled": false,
     // --------------------------------------------------------------------------
-    // 12. SPELL CHECK (cSpell)
+    // 13. SPELL CHECK (cSpell)
     // --------------------------------------------------------------------------
     "cSpell.userWords": [
         "ceos",
+        "charliermarsh",
         "checkpointer",
         "clab",
         "Containerlab",
         "groq",
         "litellm",
         "mgmt",
+        "Monokai",
         "netmiko",
         "nornir",
         "Schafer",
@@ -217,7 +231,7 @@
         "vrnetlab"
     ],
     // --------------------------------------------------------------------------
-    // 13. INDENT RAINBOW
+    // 14. INDENT RAINBOW
     // --------------------------------------------------------------------------
     "indentRainbow.indicatorStyle": "light",
     "indentRainbow.lightIndicatorStyleLineWidth": 1,
@@ -229,15 +243,15 @@
     ],
     "indentRainbow.errorColor": "rgba(102, 44, 44, 0.6)",
     // --------------------------------------------------------------------------
-    // 14. CONTAINERS / CONTAINERLAB
+    // 15. CONTAINERS / CONTAINERLAB
     // --------------------------------------------------------------------------
     "containerlab.showWelcomePage": false,
     "containerlab.skipCleanupWarning": true,
     "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
     "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
     // --------------------------------------------------------------------------
-    // 15. MISC / TELEMETRY
+    // 16. MISC / TELEMETRY
     // --------------------------------------------------------------------------
     "redhat.telemetry.enabled": false,
-    "window.density.layout": "compact",
+    "window.density.layout": "compact"
 }
