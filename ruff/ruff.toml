@@ -5,11 +5,10 @@
 
 # Core settings
 output-format = "grouped"
-line-length = 100
-target-version = "py310"
+line-length = 88
+target-version = "py312"
 
 [lint]
-# Select rule sets - aligned with Zed config
 select = [
     "E",   # pycodestyle errors (basic style)
     "W",   # pycodestyle warnings
@@ -45,6 +44,6 @@ unfixable = ["F401"] # Preserve unused imports
 # FORMATTING CONFIGURATION
 # --------------------------------------------------------------------------
 [format]
-quote-style = "double"
+quote-style = "preserve"
 line-ending = "auto"
 indent-style = "space"
