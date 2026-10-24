@@ -103,6 +103,10 @@ export PATH="$HOME/.local/bin:$PATH"
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
 
+# npm global bins (freebuff, repomix, ...) — appended so ~/.local/bin keeps
+# priority for node/npm, which are symlinks into the same directory
+export PATH="$PATH:$HOME/.local/opt/node/bin"
+
 if command -v uv >/dev/null 2>&1; then
   eval "$(uv generate-shell-completion zsh)"
   eval "$(uvx --generate-shell-completion zsh)"
