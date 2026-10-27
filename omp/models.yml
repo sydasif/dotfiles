@@ -1,0 +1,8 @@
+providers:
+  litellm:
+    modelOverrides:
+      sensenova-6.8-flash-lite:
+        name: SenseNova 6.8 Flash Lite
+        input: [text, image]
+        supportsTools: true
+        maxTokens: 65536
