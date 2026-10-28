@@ -3,6 +3,53 @@ providers:
     modelOverrides:
       sensenova-6.8-flash-lite:
         name: SenseNova 6.8 Flash Lite
-        input: [text, image]
+        reasoning: true
         supportsTools: true
-        maxTokens: 65536
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
+          defaultLevel: high
+        input: [text, image]
+        contextWindow: 65000
+
+      qwen3.8-27b:
+        name: Qwen 3.8 27B
+        reasoning: true
+        supportsTools: true
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
+          defaultLevel: high
+        input: [text, image]
+        contextWindow: 65000
+
+      claude-haiku-5-5:
+        name: Haiku 5.5
+        supportsTools: true
+        reasoning: true
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
+          defaultLevel: high
+        contextWindow: 65000
+
+      claude-sonnet-5:
+        name: Sonnet 5
+        reasoning: true
+        supportsTools: true
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
+          defaultLevel: high
+        input: [text, image]
+        contextWindow: 65000
+
+      claude-opus-5-5:
+        name: Opus 5.5
+        reasoning: true
+        supportsTools: true
+        thinking:
+          mode: effort
+          efforts: [low, medium, high]
+          defaultLevel: high
+        input: [text]
