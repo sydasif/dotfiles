@@ -6,7 +6,6 @@ modelRoles:
   vision: litellm/sensenova-6.8-flash-lite
   task: litellm/claude-haiku-5-5
   advisor: litellm/agnes-2.5-flash
-  memory:
 cycleOrder:
   - plan
   - default
