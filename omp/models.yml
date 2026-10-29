@@ -6,18 +6,36 @@ providers:
         reasoning: true
         supportsTools: true
         input: [text, image]
+        maxTokens: 65536
       qwen3.8-27b:
         name: Qwen 3.8 27B
         reasoning: true
         supportsTools: true
         input: [text, image]
+        maxTokens: 131072
       claude-haiku-5-5:
         name: Haiku 5.5
         reasoning: true
         supportsTools: true
-        contextWindow: 65000
+        contextWindow: 1048576
+        maxTokens: 131072
       claude-sonnet-5:
         name: Sonnet 5
         reasoning: true
         supportsTools: true
         input: [text, image]
+        contextWindow: 1048576
+        maxTokens: 131072
+      claude-opus-5-5:
+        name: Opus 5.5
+        reasoning: true
+        supportsTools: true
+        contextWindow: 1048576
+        maxTokens: 131072
+      agnes-2.5-flash:
+        name: Agnes 2.5 Flash
+        reasoning: true
+        supportsTools: true
+        input: [text, image]
+        contextWindow: 512000
+        maxTokens: 65536
