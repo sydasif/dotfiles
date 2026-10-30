@@ -7,12 +7,14 @@ providers:
         supportsTools: true
         input: [text, image]
         maxTokens: 65536
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }
       qwen3.8-27b:
         name: Qwen 3.8 27B
         reasoning: true
         supportsTools: true
         input: [text, image]
         maxTokens: 131072
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }
       claude-haiku-5-5:
         name: Haiku 5.5
         reasoning: true
@@ -39,3 +41,6 @@ providers:
         input: [text, image]
         contextWindow: 512000
         maxTokens: 65536
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }
+      gemini-3.5-flash-lite:
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }
