@@ -1,34 +1,29 @@
 modelRoles:
   default: litellm/claude-sonnet-5:auto
   smol: litellm/gemini-3.5-flash-lite:auto
-  slow: litellm/claude-opus-5-5
+  slow: litellm/claude-opus-5-5:auto
   plan: litellm/qwen3.8-27b:auto
   vision: litellm/sensenova-6.8-flash-lite:auto
   task: litellm/claude-haiku-5-5:auto
-  advisor: litellm/agnes-2.5-flash
+  advisor: litellm/agnes-2.5-flash:auto
 cycleOrder:
   - smol
   - default
   - slow
-  - plan
   - vision
 retry:
   modelFallback: true
   waitForUsageReset: true
   fallbackChains:
     default:
-      - litellm/claude-haiku-5-5
+      - litellm/claude-opus-5-5
     slow:
       - litellm/claude-sonnet-5
-    plan:
-      - litellm/claude-opus-5-5
     vision:
-      - litellm/gemini-3.5-flash-lite:auto
+      - litellm/gemini-3.5-flash-lite
     task:
-      - litellm/claude-haiku-5-5
-      - litellm/gemini-3.5-flash-lite:auto
+      - litellm/sensenova-6.flash-lite
     advisor:
-      - litellm/agnes-2.5-flash
       - litellm/claude-sonnet-5
 symbolPreset: nerd
 composer:
@@ -37,10 +32,6 @@ theme:
   dark: titanium
   light: light
 setupVersion: 2
-defaultThinkingLevel: high
-
-tools:
-  approvalMode: write
 memory:
   backend: mnemopi
   scoping: per-project
