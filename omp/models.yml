@@ -5,7 +5,8 @@ providers:
         name: Opus 5.5
         reasoning: true
         supportsTools: true
-        contextWindow: 1048576
+        input: [text, image]
+        contextWindow: 262000
         maxTokens: 131072
         cost: { input: 0.50, output: 2.20, cacheRead: 0.10, cacheWrite: 0.625 }
 
@@ -13,8 +14,8 @@ providers:
         name: Sonnet 5
         reasoning: true
         supportsTools: true
-        input: [text, image]
-        contextWindow: 262000
+        input: [text]
+        contextWindow: 1048576
         maxTokens: 131072
         cost: { input: 0.15, output: 0.50, cacheRead: 0.08, cacheWrite: 0 }
 
