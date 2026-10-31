@@ -28,7 +28,7 @@ retry:
     tiny:
       - litellm/gemini-3.5-flash-lite
     advisor:
-      - litellm/claude-sonnet-5
+      - litellm/sensenova-6.8-flash-lite
 symbolPreset: nerd
 composer:
   shape: claude
