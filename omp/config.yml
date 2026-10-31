@@ -1,5 +1,5 @@
 modelRoles:
-  default: litellm/claude-sonnet-5
+  default: litellm/mistral-large-4
   smol: litellm/gemini-3.5-flash-lite:auto
   slow: litellm/claude-opus-5-5
   plan: litellm/qwen3.8-27b
@@ -22,7 +22,7 @@ retry:
     vision:
       - litellm/gemini-3.5-flash-lite
     task:
-      - litellm/sensenova-6.flash-lite
+      - litellm/sensenova-6.8-flash-lite
     advisor:
       - litellm/claude-sonnet-5
 symbolPreset: nerd
@@ -35,3 +35,4 @@ setupVersion: 2
 memory:
   backend: mnemopi
   scoping: per-project
+defaultThinkingLevel: auto
