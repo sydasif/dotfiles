@@ -5,12 +5,14 @@ modelRoles:
   plan: litellm/qwen3.8-27b
   vision: litellm/sensenova-6.8-flash-lite:auto
   task: litellm/claude-haiku-5-5
+  tiny: litellm/mistral-ministral
   advisor: litellm/agnes-2.5-flash
 cycleOrder:
   - smol
   - default
   - slow
   - vision
+  - tiny
 retry:
   modelFallback: true
   waitForUsageReset: true
@@ -22,6 +24,7 @@ retry:
     vision:
       - litellm/gemini-3.5-flash-lite
     task:
+      - litellm/mistral-ministral
       - litellm/sensenova-6.8-flash-lite
     advisor:
       - litellm/claude-sonnet-5
