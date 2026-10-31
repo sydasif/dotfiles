@@ -1,31 +1,14 @@
 providers:
   litellm:
     modelOverrides:
-      sensenova-6.8-flash-lite:
-        name: SenseNova 6.8 Flash Lite
+      claude-opus-5-5:
+        name: Opus 5.5
         reasoning: true
         supportsTools: true
-        input: [text, image]
-        maxTokens: 65536
-        # approx cost: free public beta, no official list price; midpoint of
-        cost: { input: 0.50, output: 2.50, cacheRead: 0, cacheWrite: 0 }
-      qwen3.8-27b:
-        name: Qwen 3.8 27B
-        reasoning: true
-        supportsTools: true
-        input: [text, image]
-        maxTokens: 131072
-        # approx cost: free on AMD Radeon Cloud; OpenRouter listing rates
-        cost: { input: 0.035, output: 2.20, cacheRead: 0.0175, cacheWrite: 0 }
-      claude-haiku-5-5:
-        name: Haiku 5.5
-        reasoning: true
-        supportsTools: true
-        input: [text]
         contextWindow: 1048576
         maxTokens: 131072
-        # approx cost: free NVIDIA NIM endpoint; nemotron-3.5-lightning-30b-a3b
-        cost: { input: 0.05, output: 0.20, cacheRead: 0.01, cacheWrite: 0 }
+        cost: { input: 0.50, output: 2.20, cacheRead: 0.10, cacheWrite: 0.625 }
+
       claude-sonnet-5:
         name: Sonnet 5
         reasoning: true
@@ -33,16 +16,33 @@ providers:
         input: [text, image]
         contextWindow: 262000
         maxTokens: 131072
-        # approx cost: free NVIDIA NIM endpoint; nemotron-3.5-super-vl-120b-a12b
         cost: { input: 0.15, output: 0.50, cacheRead: 0.08, cacheWrite: 0 }
-      claude-opus-5-5:
-        name: Opus 5.5
+
+      claude-haiku-5-5:
+        name: Haiku 5.5
         reasoning: true
         supportsTools: true
-        contextWindow: 1048576
+        input: [text, image]
+        contextWindow: 262000
         maxTokens: 131072
-        # approx cost: free NVIDIA NIM endpoint; nemotron-3-ultra-550b-a55b
-        cost: { input: 0.50, output: 2.20, cacheRead: 0.10, cacheWrite: 0.625 }
+        cost: { input: 0.7, output: 2.1, cacheRead: 0.07, cacheWrite: 0 }
+
+      sensenova-6.8-flash-lite:
+        name: SenseNova 6.8 Flash Lite
+        reasoning: true
+        supportsTools: true
+        input: [text, image]
+        maxTokens: 65536
+        cost: { input: 0.50, output: 2.50, cacheRead: 0, cacheWrite: 0 }
+
+      qwen3.8-27b:
+        name: Qwen 3.8 27B
+        reasoning: true
+        supportsTools: true
+        input: [text, image]
+        maxTokens: 131072
+        cost: { input: 0.035, output: 2.20, cacheRead: 0.0175, cacheWrite: 0 }
+
       agnes-2.5-flash:
         name: Agnes 2.5 Flash
         reasoning: true
@@ -50,25 +50,20 @@ providers:
         input: [text, image]
         contextWindow: 512000
         maxTokens: 65536
-        # approx cost: currently free promo; Agnes published list price
         cost: { input: 0.05, output: 0.15, cacheRead: 0.005, cacheWrite: 0 }
+
       gemini-3.5-flash-lite:
-        # Google standard paid tier; no per-token cache write charge
-        # (cache storage billed at $1.00/1M tokens/hour)
-        cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0 }
-      mistral-large-4:
-        name: Mistral Large 4
         reasoning: true
         supportsTools: true
         input: [text, image]
-        contextWindow: 262000
-        maxTokens: 131072
-        cost: { input: 0.7, output: 2.1, cacheRead: 0.07, cacheWrite: 0 }
+        contextWindow: 1048576
+        cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0 }
+
       mistral-ministral:
         name: Mistral Ministral
         reasoning: false
         supportsTools: true
         input: [text, image]
-        contextWindow: 131072
+        contextWindow: 262000
         maxTokens: 32768
         cost: { input: 0.1, output: 0.1, cacheRead: 0.01, cacheWrite: 0 }
