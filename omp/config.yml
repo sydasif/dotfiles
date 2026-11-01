@@ -1,12 +1,12 @@
 modelRoles:
   default: litellm/claude-sonnet-5
   smol: litellm/gemini-3.5-flash-lite:auto
-  tiny: litellm/mistral-ministral-14b
   slow: litellm/claude-opus-5-5
   vision: litellm/sensenova-6.8-flash-lite:auto
   task: litellm/claude-haiku-5-5
   plan: litellm/qwen3.8-27b
   advisor: litellm/agnes-2.5-flash
+  tiny: litellm/mistral-ministral-14b
 cycleOrder:
   - smol
   - default

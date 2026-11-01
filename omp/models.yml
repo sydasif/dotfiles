@@ -61,7 +61,7 @@ providers:
         cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0 }
 
       mistral-ministral-14b:
-        name: Mistral Ministral
+        name: Mistral Ministral 14B
         reasoning: false
         supportsTools: true
         input: [text, image]
