@@ -2,47 +2,49 @@ providers:
   litellm:
     modelOverrides:
       claude-opus-5-5:
-        name: Opus 5.5
+        name: Opus 5.5 (Mistral Large 4)
         reasoning: true
         supportsTools: true
         input: [text, image]
-        contextWindow: 262000
+        contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 0.50, output: 2.20, cacheRead: 0.10, cacheWrite: 0.625 }
+        cost: { input: 4.00, output: 20.00, cacheRead: 0.20, cacheWrite: 5.00 }
 
       claude-sonnet-5:
-        name: Sonnet 5
+        name: Sonnet 5 (Nemotron-3 Ultra 550B)
         reasoning: true
         supportsTools: true
         input: [text]
         contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 0.15, output: 0.50, cacheRead: 0.08, cacheWrite: 0 }
+        cost: { input: 2.00, output: 10.00, cacheRead: 0.10, cacheWrite: 2.50 }
 
       claude-haiku-5-5:
-        name: Haiku 5.5
+        name: Haiku 5.5 (Nemotron-3.5 Super VL)
         reasoning: true
         supportsTools: true
         input: [text, image]
-        contextWindow: 262000
+        contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 0.7, output: 2.1, cacheRead: 0.07, cacheWrite: 0 }
+        cost: { input: 0.50, output: 2.50, cacheRead: 0.05, cacheWrite: 0.625 }
 
       sensenova-6.8-flash-lite:
         name: SenseNova 6.8 Flash Lite
         reasoning: true
         supportsTools: true
         input: [text, image]
+        contextWindow: 262144
         maxTokens: 65536
-        cost: { input: 0.50, output: 2.50, cacheRead: 0, cacheWrite: 0 }
+        cost: { input: 0.00, output: 0.00, cacheRead: 0, cacheWrite: 0 }
 
       qwen3.8-27b:
         name: Qwen 3.8 27B
         reasoning: true
         supportsTools: true
         input: [text, image]
+        contextWindow: 262144
         maxTokens: 131072
-        cost: { input: 0.035, output: 2.20, cacheRead: 0.0175, cacheWrite: 0 }
+        cost: { input: 0.425, output: 2.55, cacheRead: 0.085, cacheWrite: 0 }
 
       agnes-2.5-flash:
         name: Agnes 2.5 Flash
@@ -51,14 +53,16 @@ providers:
         input: [text, image]
         contextWindow: 512000
         maxTokens: 65536
-        cost: { input: 0.05, output: 0.15, cacheRead: 0.005, cacheWrite: 0 }
+        cost: { input: 0.00, output: 0.00, cacheRead: 0, cacheWrite: 0 }
 
       gemini-3.5-flash-lite:
+        name: Gemini 3.5 Flash-Lite
         reasoning: true
         supportsTools: true
         input: [text, image]
         contextWindow: 1048576
-        cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0 }
+        maxTokens: 65536
+        cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0.03 }
 
       mistral-ministral-14b:
         name: Mistral Ministral 14B
@@ -67,4 +71,4 @@ providers:
         input: [text, image]
         contextWindow: 256000
         maxTokens: 32768
-        cost: { input: 0.2, output: 0.2, cacheRead: 0, cacheWrite: 0 }
+        cost: { input: 0.20, output: 0.20, cacheRead: 0.02, cacheWrite: 0 }
