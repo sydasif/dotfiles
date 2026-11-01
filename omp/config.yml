@@ -1,10 +1,11 @@
 modelRoles:
   default: litellm/claude-sonnet-5
   smol: litellm/gemini-3.5-flash-lite:auto
-  tiny: litellm/mistral-ministral
+  tiny: litellm/mistral-ministral-14b
   slow: litellm/claude-opus-5-5
   vision: litellm/sensenova-6.8-flash-lite:auto
   task: litellm/claude-haiku-5-5
+  plan: litellm/qwen3.8-27b
   advisor: litellm/agnes-2.5-flash
 cycleOrder:
   - smol
@@ -17,17 +18,15 @@ retry:
   waitForUsageReset: true
   fallbackChains:
     default:
-      - litellm/claude-opus-5-5
+      - litellm/claude-haiku-5-5
     slow:
       - litellm/claude-sonnet-5
     vision:
       - litellm/gemini-3.5-flash-lite
     task:
-      - litellm/sensenova-6.8-flash-lite
-    tiny:
-      - litellm/gemini-3.5-flash-lite
+      - litellm/mistral-ministral-14b
     advisor:
-      - litellm/sensenova-6.8-flash-lite
+      - litellm/gemini-3.5-flash-lite
 symbolPreset: nerd
 composer:
   shape: claude
