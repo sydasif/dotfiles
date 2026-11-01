@@ -27,6 +27,7 @@ retry:
       - litellm/mistral-ministral-14b
     advisor:
       - litellm/gemini-3.5-flash-lite
+      - litellm/sensenova-6.8-flash-lite
 symbolPreset: nerd
 composer:
   shape: claude
