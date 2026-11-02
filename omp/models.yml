@@ -28,15 +28,6 @@ providers:
         maxTokens: 32768
         cost: { input: 0.50, output: 2.50, cacheRead: 0.05, cacheWrite: 0.625 }
 
-      sensenova-6.8-flash-lite:
-        name: SenseNova 6.8 Flash Lite
-        reasoning: true
-        supportsTools: true
-        input: [text, image]
-        contextWindow: 262144
-        maxTokens: 65536
-        cost: { input: 0.00, output: 0.00, cacheRead: 0, cacheWrite: 0 }
-
       qwen3.8-27b:
         name: Qwen 3.8 27B
         reasoning: true
@@ -45,12 +36,3 @@ providers:
         contextWindow: 262144
         maxTokens: 131072
         cost: { input: 0.425, output: 2.55, cacheRead: 0.085, cacheWrite: 0 }
-
-      gemini-3.5-flash-lite:
-        name: Gemini 3.5 Flash-Lite
-        reasoning: true
-        supportsTools: true
-        input: [text, image]
-        contextWindow: 1048576
-        maxTokens: 65536
-        cost: { input: 0.30, output: 2.50, cacheRead: 0.03, cacheWrite: 0.03 }
