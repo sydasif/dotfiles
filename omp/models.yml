@@ -11,21 +11,21 @@ providers:
         cost: { input: 4.00, output: 20.00, cacheRead: 0.20, cacheWrite: 5.00 }
 
       claude-sonnet-5:
-        name: Sonnet 5 (Nemotron-3.5 Super VL 120B)
+        name: Sonnet 5 (Nemotron 3 Ultra)
         reasoning: true
         supportsTools: true
-        input: [text, image]
+        input: [text]
         contextWindow: 1048576
         maxTokens: 131072
         cost: { input: 2.00, output: 10.00, cacheRead: 0.10, cacheWrite: 2.50 }
 
       claude-haiku-5-5:
-        name: Haiku 5.5 (Ministral 14B/3B)
-        reasoning: false
+        name: Haiku 5.5 (Nemotron 3.5 Super)
+        reasoning: true
         supportsTools: true
-        input: [text]
-        contextWindow: 256000
-        maxTokens: 32768
+        input: [text, image]
+        contextWindow: 1048576
+        maxTokens: 131072
         cost: { input: 0.50, output: 2.50, cacheRead: 0.05, cacheWrite: 0.625 }
 
       qwen3.8-27b:
