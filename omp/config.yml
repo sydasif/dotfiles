@@ -3,12 +3,14 @@ modelRoles:
   slow: litellm/claude-opus-5-5
   vision: litellm/claude-haiku-5-5
   tiny: litellm/mistral-14b-latest
-  advisor: litellm/codestral-latest
+  advisor: litellm/mistral-14b-latest
+
 cycleOrder:
   - slow
   - default
   - tiny
   - vision
+
 retry:
   modelFallback: true
   fallbackRevertPolicy: cooldown-expiry
@@ -17,6 +19,7 @@ retry:
       - litellm/claude-opus-5-5
       - litellm/claude-haiku-5-5
       - litellm/mistral-14b-latest
+
 symbolPreset: nerd
 composer:
   shape: claude
