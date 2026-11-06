@@ -2,18 +2,20 @@ modelRoles:
   default: litellm/claude-sonnet-5:medium
   slow: litellm/claude-opus-5-5:medium
   vision: litellm/claude-haiku-5-5:medium
-  advisor: litellm/mistral-14b-latest
+  tiny: litellm/mistral-14b-latest
+  advisor: litellm/agnes-2.5-flash
 cycleOrder:
   - slow
   - default
   - vision
-  - advisor
+  - tiny
 retry:
   modelFallback: true
   fallbackRevertPolicy: cooldown-expiry
   fallbackChains:
     default:
       - litellm/claude-haiku-5-5
+      - litellm/claude-opus-5-5
 symbolPreset: nerd
 composer:
   shape: claude
