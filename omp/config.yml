@@ -1,30 +1,41 @@
 modelRoles:
   default: litellm/claude-sonnet-5:medium
+  smol: litellm/mistral-14b-latest
   slow: litellm/claude-opus-5-5:medium
   vision: litellm/claude-haiku-5-5:medium
-  tiny: litellm/mistral-14b-latest
   advisor: litellm/agnes-2.5-flash
 cycleOrder:
+  - smol
   - slow
   - default
   - vision
-  - tiny
 retry:
   modelFallback: true
-  fallbackRevertPolicy: cooldown-expiry
   fallbackChains:
     default:
       - litellm/claude-haiku-5-5
       - litellm/claude-opus-5-5
+    slow:
+      - litellm/claude-sonnet-5
+    vision:
+      - litellm/claude-haiku-5-5
+    smol:
+      - litellm/claude-haiku-5-5
+    advisor:
+      - litellm/mistral-14b-latest
+  fallbackRevertPolicy: cooldown-expiry
 symbolPreset: nerd
 composer:
   shape: claude
 theme:
   dark: titanium
   light: light
-setupVersion: 2
+setupVersion: 4
 advisor:
   enabled: true
 memory:
   backend: mnemopi
   scoping: per-project
+update:
+  auto: true
+
