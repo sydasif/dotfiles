@@ -13,12 +13,9 @@ retry:
   modelFallback: true
   fallbackChains:
     default:
-      - litellm/claude-haiku-5-5
       - litellm/claude-opus-5-5
     slow:
       - litellm/claude-sonnet-5
-    vision:
-      - litellm/claude-haiku-5-5
     smol:
       - litellm/claude-haiku-5-5
     advisor:
@@ -38,4 +35,3 @@ memory:
   scoping: per-project
 update:
   auto: true
-
