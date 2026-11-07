@@ -4,6 +4,10 @@ providers:
       claude-opus-5-5:
         name: Opus 5.5 (Mistral Large 4)
         reasoning: true
+        thinking:
+          mode: effort
+          efforts: [minimal, low, medium, high, xhigh, max]
+          defaultLevel: high
         supportsTools: true
         input: [text, image]
         contextWindow: 1048576
@@ -13,6 +17,10 @@ providers:
       claude-sonnet-5:
         name: Sonnet 5 (Nemotron 3 Ultra)
         reasoning: true
+        thinking:
+          mode: effort
+          efforts: [minimal, low, medium, high, xhigh, max]
+          defaultLevel: high
         supportsTools: true
         input: [text]
         contextWindow: 1048576
@@ -22,8 +30,25 @@ providers:
       claude-haiku-5-5:
         name: Haiku 5.5 (Nemotron 3.5 Super)
         reasoning: true
+        thinking:
+          mode: effort
+          efforts: [minimal, low, medium, high, xhigh, max]
+          defaultLevel: low
         supportsTools: true
         input: [text, image]
         contextWindow: 1048576
+        maxTokens: 131072
+        cost: { input: 0.10, output: 0.40, cacheRead: 0.08, cacheWrite: 0.125 }
+
+      qwen3.8-27b:
+        name: Qwen 3.8B
+        reasoning: true
+        thinking:
+          mode: effort
+          efforts: [minimal, low, medium, high, xhigh, max]
+          defaultLevel: minimal
+        supportsTools: true
+        input: [text, image]
+        contextWindow: 262000
         maxTokens: 131072
         cost: { input: 0.10, output: 0.40, cacheRead: 0.08, cacheWrite: 0.125 }

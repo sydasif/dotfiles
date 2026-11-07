@@ -2,12 +2,14 @@ modelRoles:
   default: litellm/claude-sonnet-5:medium
   smol: litellm/mistral-14b-latest
   slow: litellm/claude-opus-5-5:medium
+  plan: litellm/qwen3.8-27b:minimal
   vision: litellm/claude-haiku-5-5:medium
   advisor: litellm/agnes-2.5-flash
 cycleOrder:
+  - default
   - smol
   - slow
-  - default
+  - plan
   - vision
 retry:
   modelFallback: true
