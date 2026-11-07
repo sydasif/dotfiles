@@ -8,7 +8,7 @@ providers:
         input: [text, image]
         contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 4.00, output: 20.00, cacheRead: 0.20, cacheWrite: 5.00 }
+        cost: { input: 0.70, output: 2.10, cacheRead: 0.07, cacheWrite: 0.875 }
 
       claude-sonnet-5:
         name: Sonnet 5 (Nemotron 3 Ultra)
@@ -17,7 +17,7 @@ providers:
         input: [text]
         contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 2.00, output: 10.00, cacheRead: 0.10, cacheWrite: 2.50 }
+        cost: { input: 0.40, output: 1.76, cacheRead: 0.08, cacheWrite: 0.50 }
 
       claude-haiku-5-5:
         name: Haiku 5.5 (Nemotron 3.5 Super)
@@ -26,4 +26,4 @@ providers:
         input: [text, image]
         contextWindow: 1048576
         maxTokens: 131072
-        cost: { input: 0.50, output: 2.50, cacheRead: 0.05, cacheWrite: 0.625 }
+        cost: { input: 0.10, output: 0.40, cacheRead: 0.08, cacheWrite: 0.125 }
